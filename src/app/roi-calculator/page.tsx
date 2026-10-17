@@ -56,19 +56,19 @@ export default function RoiCalculatorPage() {
     : 0;
 
   return (
-    <main className="pt-24 pb-20 bg-slate-950">
+    <main className="pt-24 pb-20 bg-[#FAF8F5]">
       {/* Hero Header */}
-      <section className="py-16 bg-radial-glow border-b border-slate-800/80 relative">
-        <div className="absolute inset-0 bg-grid-pattern opacity-60 pointer-events-none" />
+      <section className="py-16 bg-[#FAF8F5] border-b border-[#E5DFD5] relative">
+        <div className="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-cyan-500/30 text-xs font-semibold text-cyan-300 mb-6">
-            <Calculator className="w-3.5 h-3.5 text-cyan-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F4ECE4] border border-[#E8D8CC] text-xs font-semibold text-[#C75D3C] mb-6 shadow-2xs">
+            <Calculator className="w-3.5 h-3.5 text-[#D97757]" />
             <span>Interactive FinOps Forecasting Tool</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
+          <h1 className="text-4xl sm:text-5xl font-bold text-[#141413] tracking-tight">
             AI Operations & Token Cost ROI Calculator
           </h1>
-          <p className="mt-4 text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-[#5E5D59] max-w-2xl mx-auto leading-relaxed">
             Estimate how much your enterprise can save on recurring OpenAI / Anthropic / Bedrock API invoices using semantic caching and model right-sizing.
           </p>
         </div>
@@ -79,13 +79,13 @@ export default function RoiCalculatorPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             {/* Left Column: Sliders & Controls */}
-            <div className="lg:col-span-7 glass-panel rounded-3xl p-6 sm:p-10 border border-slate-800 bg-slate-900/80 space-y-8">
-              <div className="flex items-center justify-between pb-4 border-b border-slate-800">
-                <h2 className="text-xl font-bold text-white flex items-center gap-2">
-                  <Sliders className="w-5 h-5 text-cyan-400" />
+            <div className="lg:col-span-7 rounded-3xl p-6 sm:p-10 border border-[#E5DFD5] bg-white shadow-xs space-y-8">
+              <div className="flex items-center justify-between pb-4 border-b border-[#E5DFD5]">
+                <h2 className="text-xl font-bold text-[#141413] flex items-center gap-2">
+                  <Sliders className="w-5 h-5 text-[#D97757]" />
                   Your Organization&apos;s Usage Parameters
                 </h2>
-                <span className="text-xs text-slate-400 font-mono">
+                <span className="text-xs text-[#73716B] font-mono">
                   {(monthlyTotalQueries).toLocaleString()} queries/mo
                 </span>
               </div>
@@ -93,10 +93,10 @@ export default function RoiCalculatorPage() {
               {/* Slider 1: Team Size */}
               <div className="space-y-3">
                 <div className="flex justify-between items-center text-sm">
-                  <label htmlFor="team-size" className="font-semibold text-slate-200">
+                  <label htmlFor="team-size" className="font-semibold text-[#141413]">
                     Active AI Users / Employees
                   </label>
-                  <span className="font-mono text-cyan-400 font-bold px-2 py-0.5 rounded-md bg-slate-950 border border-slate-800">
+                  <span className="font-mono text-[#141413] font-bold px-2 py-0.5 rounded-md bg-[#FAF8F5] border border-[#E5DFD5]">
                     {teamSize} users
                   </span>
                 </div>
@@ -108,9 +108,9 @@ export default function RoiCalculatorPage() {
                   step="5"
                   value={teamSize}
                   onChange={(e) => setTeamSize(Number(e.target.value))}
-                  className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400"
+                  className="w-full h-2 bg-[#E5DFD5] rounded-lg appearance-none cursor-pointer accent-[#D97757]"
                 />
-                <div className="flex justify-between text-[11px] text-slate-500">
+                <div className="flex justify-between text-[11px] text-[#73716B]">
                   <span>5 users</span>
                   <span>250</span>
                   <span>500</span>
@@ -121,10 +121,10 @@ export default function RoiCalculatorPage() {
               {/* Slider 2: Daily Queries Per User */}
               <div className="space-y-3">
                 <div className="flex justify-between items-center text-sm">
-                  <label htmlFor="queries-per-user" className="font-semibold text-slate-200">
+                  <label htmlFor="queries-per-user" className="font-semibold text-[#141413]">
                     Daily AI Queries Per Employee
                   </label>
-                  <span className="font-mono text-cyan-400 font-bold px-2 py-0.5 rounded-md bg-slate-950 border border-slate-800">
+                  <span className="font-mono text-[#141413] font-bold px-2 py-0.5 rounded-md bg-[#FAF8F5] border border-[#E5DFD5]">
                     {queriesPerUserDay} requests/day
                   </span>
                 </div>
@@ -136,9 +136,9 @@ export default function RoiCalculatorPage() {
                   step="1"
                   value={queriesPerUserDay}
                   onChange={(e) => setQueriesPerUserDay(Number(e.target.value))}
-                  className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400"
+                  className="w-full h-2 bg-[#E5DFD5] rounded-lg appearance-none cursor-pointer accent-[#D97757]"
                 />
-                <div className="flex justify-between text-[11px] text-slate-500">
+                <div className="flex justify-between text-[11px] text-[#73716B]">
                   <span>2 (Occasional)</span>
                   <span>20 (Standard Workflow)</span>
                   <span>100 (Power Users / Support)</span>
@@ -148,10 +148,10 @@ export default function RoiCalculatorPage() {
               {/* Slider 3: Average Tokens Per Prompt + Completion */}
               <div className="space-y-3">
                 <div className="flex justify-between items-center text-sm">
-                  <label htmlFor="tokens-per-query" className="font-semibold text-slate-200">
+                  <label htmlFor="tokens-per-query" className="font-semibold text-[#141413]">
                     Average Tokens Per Query (Prompt + Output + RAG context)
                   </label>
-                  <span className="font-mono text-cyan-400 font-bold px-2 py-0.5 rounded-md bg-slate-950 border border-slate-800">
+                  <span className="font-mono text-[#141413] font-bold px-2 py-0.5 rounded-md bg-[#FAF8F5] border border-[#E5DFD5]">
                     {avgTokensPerQuery.toLocaleString()} tokens
                   </span>
                 </div>
@@ -163,9 +163,9 @@ export default function RoiCalculatorPage() {
                   step="250"
                   value={avgTokensPerQuery}
                   onChange={(e) => setAvgTokensPerQuery(Number(e.target.value))}
-                  className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400"
+                  className="w-full h-2 bg-[#E5DFD5] rounded-lg appearance-none cursor-pointer accent-[#D97757]"
                 />
-                <div className="flex justify-between text-[11px] text-slate-500">
+                <div className="flex justify-between text-[11px] text-[#73716B]">
                   <span>500 (Short QA)</span>
                   <span>4,000 (RAG Documents)</span>
                   <span>12,000 (Long Docs & Code)</span>
@@ -175,10 +175,10 @@ export default function RoiCalculatorPage() {
               {/* Slider 4: Semantic Caching Hit Rate */}
               <div className="space-y-3">
                 <div className="flex justify-between items-center text-sm">
-                  <label htmlFor="cache-hit-rate" className="font-semibold text-slate-200">
+                  <label htmlFor="cache-hit-rate" className="font-semibold text-[#141413]">
                     Target Semantic Cache Hit Ratio
                   </label>
-                  <span className="font-mono text-emerald-400 font-bold px-2 py-0.5 rounded-md bg-slate-950 border border-slate-800">
+                  <span className="font-mono text-emerald-700 font-bold px-2 py-0.5 rounded-md bg-emerald-50 border border-emerald-200">
                     {cacheHitRate}%
                   </span>
                 </div>
@@ -190,9 +190,9 @@ export default function RoiCalculatorPage() {
                   step="5"
                   value={cacheHitRate}
                   onChange={(e) => setCacheHitRate(Number(e.target.value))}
-                  className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-400"
+                  className="w-full h-2 bg-[#E5DFD5] rounded-lg appearance-none cursor-pointer accent-emerald-600"
                 />
-                <p className="text-[11px] text-slate-400">
+                <p className="text-[11px] text-[#73716B]">
                   Identifies semantically identical questions from employees and serves instant sub-millisecond cached answers.
                 </p>
               </div>
@@ -200,10 +200,10 @@ export default function RoiCalculatorPage() {
               {/* Slider 5: SLM Routing Ratio */}
               <div className="space-y-3">
                 <div className="flex justify-between items-center text-sm">
-                  <label htmlFor="slm-routing-ratio" className="font-semibold text-slate-200">
+                  <label htmlFor="slm-routing-ratio" className="font-semibold text-[#141413]">
                     Queries Routed to Small Language Models (SLMs)
                   </label>
-                  <span className="font-mono text-cyan-400 font-bold px-2 py-0.5 rounded-md bg-slate-950 border border-slate-800">
+                  <span className="font-mono text-[#D97757] font-bold px-2 py-0.5 rounded-md bg-[#FAF8F5] border border-[#E5DFD5]">
                     {slmRoutingRatio}%
                   </span>
                 </div>
@@ -215,9 +215,9 @@ export default function RoiCalculatorPage() {
                   step="5"
                   value={slmRoutingRatio}
                   onChange={(e) => setSlmRoutingRatio(Number(e.target.value))}
-                  className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400"
+                  className="w-full h-2 bg-[#E5DFD5] rounded-lg appearance-none cursor-pointer accent-[#D97757]"
                 />
-                <p className="text-[11px] text-slate-400">
+                <p className="text-[11px] text-[#73716B]">
                   Routable classification, extraction, and formatting tasks sent to Llama 3 / Mistral at 95% lower cost.
                 </p>
               </div>
@@ -225,69 +225,69 @@ export default function RoiCalculatorPage() {
 
             {/* Right Column: Projected Savings Card */}
             <div className="lg:col-span-5 space-y-6">
-              <div className="rounded-3xl p-8 sm:p-10 border border-cyan-500/40 bg-gradient-to-b from-slate-900 via-slate-900 to-cyan-950/30 shadow-2xl relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-40 h-40 bg-cyan-500/10 rounded-full blur-2xl pointer-events-none" />
+              <div className="rounded-3xl p-8 sm:p-10 border border-[#E2D4C3] bg-gradient-to-br from-[#F5EFE6] via-[#FAF7F2] to-[#F0E6D8] shadow-md relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-40 h-40 bg-[#D97757]/10 rounded-full blur-2xl pointer-events-none" />
 
-                <span className="text-xs font-bold uppercase tracking-widest text-cyan-400 block mb-2">
+                <span className="text-xs font-bold uppercase tracking-widest text-[#C75D3C] block mb-2">
                   Projected Financial Impact
                 </span>
 
                 <div className="mb-6">
-                  <span className="text-xs text-slate-400 block">
+                  <span className="text-xs text-[#73716B] block">
                     Estimated Annual Savings
                   </span>
-                  <div className="text-4xl sm:text-5xl font-black text-white tracking-tight font-mono text-gradient-cyan">
+                  <div className="text-4xl sm:text-5xl font-black text-[#141413] tracking-tight font-mono">
                     ${Math.round(annualSavings).toLocaleString()}
                   </div>
-                  <span className="text-xs text-emerald-400 font-semibold inline-flex items-center gap-1 mt-1">
-                    <TrendingDown className="w-3.5 h-3.5" />
+                  <span className="text-xs text-emerald-700 font-semibold inline-flex items-center gap-1 mt-1">
+                    <TrendingDown className="w-3.5 h-3.5 text-emerald-600" />
                     {percentageSavings}% Overall Spend Reduction
                   </span>
                 </div>
 
                 {/* Comparison Breakdown */}
-                <div className="space-y-3 pt-4 border-t border-slate-800 text-xs">
-                  <div className="flex justify-between items-center p-3 rounded-xl bg-slate-950/60 border border-slate-800">
-                    <span className="text-slate-400">Current Unoptimized Monthly Spend:</span>
-                    <span className="font-mono font-bold text-red-400 text-sm">
+                <div className="space-y-3 pt-4 border-t border-[#E5DFD5] text-xs">
+                  <div className="flex justify-between items-center p-3 rounded-xl bg-white border border-[#E5DFD5]">
+                    <span className="text-[#73716B]">Current Unoptimized Monthly Spend:</span>
+                    <span className="font-mono font-bold text-red-600 text-sm">
                       ${Math.round(unoptimizedCostMonthly).toLocaleString()} /mo
                     </span>
                   </div>
 
-                  <div className="flex justify-between items-center p-3 rounded-xl bg-slate-950/60 border border-slate-800">
-                    <span className="text-slate-400">Optimized with Cortex Grid Architecture:</span>
-                    <span className="font-mono font-bold text-emerald-400 text-sm">
+                  <div className="flex justify-between items-center p-3 rounded-xl bg-white border border-[#E5DFD5]">
+                    <span className="text-[#73716B]">Optimized with Cortex Grid Architecture:</span>
+                    <span className="font-mono font-bold text-emerald-700 text-sm">
                       ${Math.round(optimizedCostMonthly).toLocaleString()} /mo
                     </span>
                   </div>
 
-                  <div className="flex justify-between items-center p-3 rounded-xl bg-cyan-950/40 border border-cyan-500/30">
-                    <span className="text-cyan-300 font-semibold">Net Monthly Operational Savings:</span>
-                    <span className="font-mono font-bold text-cyan-300 text-sm">
+                  <div className="flex justify-between items-center p-3 rounded-xl bg-[#F4ECE4] border border-[#E8D8CC]">
+                    <span className="text-[#141413] font-semibold">Net Monthly Operational Savings:</span>
+                    <span className="font-mono font-bold text-[#C75D3C] text-sm">
                       +${Math.round(monthlySavings).toLocaleString()} /mo
                     </span>
                   </div>
                 </div>
 
                 {/* Proof Notes */}
-                <div className="pt-6 space-y-2 text-[11px] text-slate-400">
+                <div className="pt-6 space-y-2 text-[11px] text-[#73716B]">
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#D97757]" />
                     <span>Based on standard enterprise LLM pricing benchmarks</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#D97757]" />
                     <span>Includes vector store indexing & caching overhead</span>
                   </div>
                 </div>
 
                 <div className="pt-6">
                   <Link
-                    href={`/contact?service=ai-operations&budget=$${Math.round(annualSavings).toLocaleString()}+savings`}
-                    className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-bold text-sm bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-slate-950 shadow-lg shadow-cyan-500/20 transition-all text-center"
+                    href={`/contact?service=ai-operations`}
+                    className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-bold text-sm bg-[#141413] hover:bg-[#2C2B28] text-white shadow-md transition-all text-center"
                   >
                     <span>Claim Your 48-Hour AI Efficiency Audit</span>
-                    <ArrowRight className="w-4 h-4 text-slate-950" />
+                    <ArrowRight className="w-4 h-4 text-white" />
                   </Link>
                 </div>
               </div>

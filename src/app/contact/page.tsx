@@ -24,19 +24,19 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="pt-24 pb-20 bg-slate-950">
+    <main className="pt-24 pb-20 bg-[#FAF8F5]">
       {/* Header */}
-      <section className="py-16 bg-radial-glow border-b border-slate-800/80 relative">
-        <div className="absolute inset-0 bg-grid-pattern opacity-60 pointer-events-none" />
+      <section className="py-16 bg-[#FAF8F5] border-b border-[#E5DFD5] relative">
+        <div className="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-cyan-500/30 text-xs font-semibold text-cyan-300 mb-6">
-            <Calendar className="w-3.5 h-3.5 text-cyan-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F4ECE4] border border-[#E8D8CC] text-xs font-semibold text-[#C75D3C] mb-6 shadow-2xs">
+            <Calendar className="w-3.5 h-3.5 text-[#D97757]" />
             <span>Senior Architectural Advisory</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
+          <h1 className="text-4xl sm:text-5xl font-bold text-[#141413] tracking-tight">
             Schedule an Architectural Consultation
           </h1>
-          <p className="mt-4 text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-[#5E5D59] max-w-2xl mx-auto leading-relaxed">
             Connect directly with our senior cloud architects, security practitioners, and AI operations engineers. All discussions are protected under mutual NDA.
           </p>
         </div>
@@ -48,21 +48,21 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* Left Column: Direct Coordinates & Guarantees */}
             <div className="lg:col-span-5 space-y-6">
-              <div className="rounded-2xl glass-panel p-6 border border-slate-800 bg-slate-900/60 space-y-4">
-                <h2 className="text-lg font-bold text-white">
+              <div className="rounded-2xl p-6 border border-[#E5DFD5] bg-white shadow-xs space-y-4">
+                <h2 className="text-lg font-bold text-[#141413]">
                   Direct Enterprise Touchpoints
                 </h2>
 
-                <ul className="space-y-4 text-sm text-slate-300">
+                <ul className="space-y-4 text-sm text-[#5E5D59]">
                   <li className="flex items-start gap-3">
-                    <div className="p-2 rounded-lg bg-cyan-500/10 text-cyan-400 mt-0.5">
+                    <div className="p-2 rounded-lg bg-[#F4ECE4] text-[#D97757] mt-0.5">
                       <PhoneCall className="w-4 h-4" />
                     </div>
                     <div>
-                      <span className="text-xs text-slate-400 block">Phone number:</span>
+                      <span className="text-xs text-[#73716B] block">Phone number:</span>
                       <a
                         href="tel:+919911560093"
-                        className="font-bold text-white hover:text-cyan-400 transition-colors font-mono"
+                        className="font-bold text-[#141413] hover:text-[#D97757] transition-colors font-mono"
                       >
                         +919911560093
                       </a>
@@ -70,14 +70,14 @@ export default function ContactPage() {
                   </li>
 
                   <li className="flex items-start gap-3">
-                    <div className="p-2 rounded-lg bg-cyan-500/10 text-cyan-400 mt-0.5">
+                    <div className="p-2 rounded-lg bg-[#F4ECE4] text-[#D97757] mt-0.5">
                       <Mail className="w-4 h-4" />
                     </div>
                     <div>
-                      <span className="text-xs text-slate-400 block">Alliances & Inquiries:</span>
+                      <span className="text-xs text-[#73716B] block">Alliances & Inquiries:</span>
                       <a
                         href="mailto:alliances@cortexgridconsulting.com"
-                        className="font-bold text-white hover:text-cyan-400 transition-colors"
+                        className="font-bold text-[#141413] hover:text-[#D97757] transition-colors"
                       >
                         alliances@cortexgridconsulting.com
                       </a>
@@ -85,12 +85,12 @@ export default function ContactPage() {
                   </li>
 
                   <li className="flex items-start gap-3">
-                    <div className="p-2 rounded-lg bg-cyan-500/10 text-cyan-400 mt-0.5">
+                    <div className="p-2 rounded-lg bg-[#F4ECE4] text-[#D97757] mt-0.5">
                       <Clock className="w-4 h-4" />
                     </div>
                     <div>
-                      <span className="text-xs text-slate-400 block">Operations Center (NOC):</span>
-                      <span className="text-white font-medium">
+                      <span className="text-xs text-[#73716B] block">Operations Center (NOC):</span>
+                      <span className="text-[#141413] font-medium">
                         24/7/365 Proactive Monitoring & Escalation
                       </span>
                     </div>
@@ -99,21 +99,21 @@ export default function ContactPage() {
               </div>
 
               {/* Consultation Guarantees */}
-              <div className="rounded-2xl p-6 border border-slate-800 bg-slate-900/40 space-y-3 text-xs text-slate-300">
-                <div className="flex items-center gap-2 text-cyan-400 font-semibold text-sm">
-                  <ShieldCheck className="w-4 h-4" />
+              <div className="rounded-2xl p-6 border border-[#E5DFD5] bg-white shadow-2xs space-y-3 text-xs text-[#5E5D59]">
+                <div className="flex items-center gap-2 text-[#C75D3C] font-semibold text-sm">
+                  <ShieldCheck className="w-4 h-4 text-[#D97757]" />
                   <span>The Cortex Grid Engagement Standard</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#D97757] mt-0.5 flex-shrink-0" />
                   <span>24-Hour initial response SLA by a certified senior architect.</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#D97757] mt-0.5 flex-shrink-0" />
                   <span>Mutual NDA executed before exchanging any architecture diagrams or logs.</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#D97757] mt-0.5 flex-shrink-0" />
                   <span>Transparent scoping, estimated timelines, and quantitative ROI projection.</span>
                 </div>
               </div>

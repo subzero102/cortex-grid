@@ -144,34 +144,34 @@ export const ContactForm: React.FC<ContactFormProps> = ({
   if (submissionSuccess) {
     return (
       <div
-        className={`glass-panel rounded-2xl p-8 sm:p-10 border border-cyan-500/30 bg-slate-900/90 text-center ${className}`}
+        className={`rounded-2xl p-8 sm:p-10 border border-[#E5DFD5] bg-white shadow-lg text-center ${className}`}
         role="alert"
         aria-live="polite"
       >
-        <div className="w-16 h-16 bg-cyan-500/10 border border-cyan-400/30 rounded-2xl flex items-center justify-center mx-auto mb-6 text-cyan-400">
+        <div className="w-16 h-16 bg-[#F4ECE4] border border-[#E8D8CC] rounded-2xl flex items-center justify-center mx-auto mb-6 text-[#D97757]">
           <CheckCircle2 className="w-9 h-9" />
         </div>
-        <h3 className="text-2xl font-bold text-white mb-3">
+        <h3 className="text-2xl font-bold text-[#141413] mb-3">
           Consultation Request Confirmed
         </h3>
-        <p className="text-slate-300 max-w-md mx-auto mb-6 leading-relaxed">
-          Thank you for reaching out, <strong className="text-white">{formData.fullName}</strong>. A Senior Solution Architect from Cortex Grid has been assigned to your inquiry for <strong className="text-cyan-300">{formData.company}</strong>.
+        <p className="text-[#5E5D59] max-w-md mx-auto mb-6 leading-relaxed">
+          Thank you for reaching out, <strong className="text-[#141413]">{formData.fullName}</strong>. A Senior Solution Architect from Cortex Grid has been assigned to your inquiry for <strong className="text-[#C75D3C]">{formData.company}</strong>.
         </p>
-        <div className="bg-slate-950/80 rounded-xl p-4 max-w-md mx-auto border border-slate-800 text-left text-sm text-slate-300 mb-8 space-y-2">
-          <div className="flex items-center gap-2 text-cyan-400 font-semibold">
-            <ShieldCheck className="w-4 h-4" /> Next Steps & SLA:
+        <div className="bg-[#FAF8F5] rounded-xl p-4 max-w-md mx-auto border border-[#E5DFD5] text-left text-sm text-[#5E5D59] mb-8 space-y-2">
+          <div className="flex items-center gap-2 text-[#C75D3C] font-semibold">
+            <ShieldCheck className="w-4 h-4 text-[#D97757]" /> Next Steps & SLA:
           </div>
-          <p className="text-xs text-slate-400">
-            • Initial technical assessment and calendar invitation sent within <strong>24 business hours</strong>.
+          <p className="text-xs text-[#73716B]">
+            • Initial technical assessment and calendar invitation sent within <strong className="text-[#141413]">24 business hours</strong>.
           </p>
-          <p className="text-xs text-slate-400">
+          <p className="text-xs text-[#73716B]">
             • A non-disclosure agreement (NDA) can be provided upon request prior to architectural discovery.
           </p>
         </div>
         <button
           type="button"
           onClick={handleReset}
-          className="inline-flex items-center justify-center px-6 py-3 rounded-lg text-sm font-medium bg-slate-800 hover:bg-slate-700 text-slate-200 transition-colors"
+          className="inline-flex items-center justify-center px-6 py-3 rounded-lg text-sm font-medium bg-[#141413] hover:bg-[#2C2B28] text-white transition-colors"
         >
           Submit Another Inquiry
         </button>
@@ -183,7 +183,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
     <form
       onSubmit={handleSubmit}
       noValidate
-      className={`glass-panel rounded-2xl p-6 sm:p-10 border border-slate-800 bg-slate-900/80 shadow-2xl relative ${className}`}
+      className={`rounded-2xl p-6 sm:p-10 border border-[#E5DFD5] bg-white shadow-xs relative ${className}`}
       aria-label="Cortex Grid Consultation Request Form"
     >
       {/* Honeypot field for bot suppression */}
@@ -203,11 +203,11 @@ export const ContactForm: React.FC<ContactFormProps> = ({
       {serverError && (
         <div
           role="alert"
-          className="mb-6 p-4 rounded-xl bg-red-950/40 border border-red-500/40 flex items-start gap-3 text-red-300 text-sm"
+          className="mb-6 p-4 rounded-xl bg-red-50 border border-red-200 flex items-start gap-3 text-red-700 text-sm"
         >
-          <AlertCircle className="w-5 h-5 flex-shrink-0 text-red-400 mt-0.5" />
+          <AlertCircle className="w-5 h-5 flex-shrink-0 text-red-500 mt-0.5" />
           <div>
-            <p className="font-semibold text-red-200">Submission Error</p>
+            <p className="font-semibold text-red-800">Submission Error</p>
             <p>{serverError}</p>
           </div>
         </div>
@@ -218,9 +218,9 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         <div>
           <label
             htmlFor="fullName"
-            className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2"
+            className="block text-xs font-semibold uppercase tracking-wider text-[#141413] mb-2"
           >
-            Full Name <span className="text-cyan-400">*</span>
+            Full Name <span className="text-[#D97757]">*</span>
           </label>
           <input
             type="text"
@@ -234,14 +234,14 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             aria-invalid={!!errors.fullName}
             aria-describedby={errors.fullName ? "fullName-error" : undefined}
             disabled={isSubmitting}
-            className={`w-full min-h-[48px] px-4 py-2.5 rounded-lg bg-slate-950/90 border text-slate-100 placeholder-slate-500 text-sm focus:outline-hidden transition-colors ${
+            className={`w-full min-h-[48px] px-4 py-2.5 rounded-lg bg-[#FAF8F5] border text-[#141413] placeholder-[#87867F] text-sm focus:outline-hidden transition-all ${
               errors.fullName
-                ? "border-red-500/80 focus:border-red-500"
-                : "border-slate-800 focus:border-cyan-400"
+                ? "border-red-500 focus:border-red-500 focus:ring-1 focus:ring-red-500/30"
+                : "border-[#DCD6CD] focus:border-[#D97757] focus:ring-1 focus:ring-[#D97757]/30"
             }`}
           />
           {errors.fullName && (
-            <p id="fullName-error" className="mt-1.5 text-xs text-red-400 flex items-center gap-1">
+            <p id="fullName-error" className="mt-1.5 text-xs text-red-600 flex items-center gap-1">
               <AlertCircle className="w-3.5 h-3.5" /> {errors.fullName}
             </p>
           )}
@@ -251,9 +251,9 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         <div>
           <label
             htmlFor="email"
-            className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2"
+            className="block text-xs font-semibold uppercase tracking-wider text-[#141413] mb-2"
           >
-            Corporate Email <span className="text-cyan-400">*</span>
+            Corporate Email <span className="text-[#D97757]">*</span>
           </label>
           <input
             type="email"
@@ -267,14 +267,14 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             aria-invalid={!!errors.email}
             aria-describedby={errors.email ? "email-error" : undefined}
             disabled={isSubmitting}
-            className={`w-full min-h-[48px] px-4 py-2.5 rounded-lg bg-slate-950/90 border text-slate-100 placeholder-slate-500 text-sm focus:outline-hidden transition-colors ${
+            className={`w-full min-h-[48px] px-4 py-2.5 rounded-lg bg-[#FAF8F5] border text-[#141413] placeholder-[#87867F] text-sm focus:outline-hidden transition-all ${
               errors.email
-                ? "border-red-500/80 focus:border-red-500"
-                : "border-slate-800 focus:border-cyan-400"
+                ? "border-red-500 focus:border-red-500 focus:ring-1 focus:ring-red-500/30"
+                : "border-[#DCD6CD] focus:border-[#D97757] focus:ring-1 focus:ring-[#D97757]/30"
             }`}
           />
           {errors.email && (
-            <p id="email-error" className="mt-1.5 text-xs text-red-400 flex items-center gap-1">
+            <p id="email-error" className="mt-1.5 text-xs text-red-600 flex items-center gap-1">
               <AlertCircle className="w-3.5 h-3.5" /> {errors.email}
             </p>
           )}
@@ -286,9 +286,9 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         <div>
           <label
             htmlFor="company"
-            className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2"
+            className="block text-xs font-semibold uppercase tracking-wider text-[#141413] mb-2"
           >
-            Company / Organization <span className="text-cyan-400">*</span>
+            Company / Organization <span className="text-[#D97757]">*</span>
           </label>
           <input
             type="text"
@@ -302,14 +302,14 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             aria-invalid={!!errors.company}
             aria-describedby={errors.company ? "company-error" : undefined}
             disabled={isSubmitting}
-            className={`w-full min-h-[48px] px-4 py-2.5 rounded-lg bg-slate-950/90 border text-slate-100 placeholder-slate-500 text-sm focus:outline-hidden transition-colors ${
+            className={`w-full min-h-[48px] px-4 py-2.5 rounded-lg bg-[#FAF8F5] border text-[#141413] placeholder-[#87867F] text-sm focus:outline-hidden transition-all ${
               errors.company
-                ? "border-red-500/80 focus:border-red-500"
-                : "border-slate-800 focus:border-cyan-400"
+                ? "border-red-500 focus:border-red-500 focus:ring-1 focus:ring-red-500/30"
+                : "border-[#DCD6CD] focus:border-[#D97757] focus:ring-1 focus:ring-[#D97757]/30"
             }`}
           />
           {errors.company && (
-            <p id="company-error" className="mt-1.5 text-xs text-red-400 flex items-center gap-1">
+            <p id="company-error" className="mt-1.5 text-xs text-red-600 flex items-center gap-1">
               <AlertCircle className="w-3.5 h-3.5" /> {errors.company}
             </p>
           )}
@@ -319,7 +319,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         <div>
           <label
             htmlFor="phone"
-            className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2"
+            className="block text-xs font-semibold uppercase tracking-wider text-[#141413] mb-2"
           >
             Direct Phone (Optional)
           </label>
@@ -332,7 +332,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             onChange={handleChange}
             placeholder="+1 (555) 234-5678"
             disabled={isSubmitting}
-            className="w-full min-h-[48px] px-4 py-2.5 rounded-lg bg-slate-950/90 border border-slate-800 text-slate-100 placeholder-slate-500 text-sm focus:outline-hidden focus:border-cyan-400 transition-colors"
+            className="w-full min-h-[48px] px-4 py-2.5 rounded-lg bg-[#FAF8F5] border border-[#DCD6CD] text-[#141413] placeholder-[#87867F] text-sm focus:outline-hidden focus:border-[#D97757] focus:ring-1 focus:ring-[#D97757]/30 transition-all"
           />
         </div>
       </div>
@@ -341,9 +341,9 @@ export const ContactForm: React.FC<ContactFormProps> = ({
       <div className="mb-5">
         <label
           htmlFor="service"
-          className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2"
+          className="block text-xs font-semibold uppercase tracking-wider text-[#141413] mb-2"
         >
-          Practice Area <span className="text-cyan-400">*</span>
+          Practice Area <span className="text-[#D97757]">*</span>
         </label>
         <div className="relative">
           <select
@@ -352,7 +352,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             value={formData.service}
             onChange={handleChange}
             disabled={isSubmitting}
-            className="w-full min-h-[48px] px-4 py-2.5 rounded-lg bg-slate-950/90 border border-slate-800 text-slate-100 text-sm focus:outline-hidden focus:border-cyan-400 transition-colors appearance-none cursor-pointer pr-10"
+            className="w-full min-h-[48px] px-4 py-2.5 rounded-lg bg-[#FAF8F5] border border-[#DCD6CD] text-[#141413] text-sm focus:outline-hidden focus:border-[#D97757] focus:ring-1 focus:ring-[#D97757]/30 transition-all appearance-none cursor-pointer pr-10"
           >
             <option value="ai-operations">AI Operations & FinOps Consulting</option>
             <option value="cloud">Cloud Solutions (Azure, AWS, GCP)</option>
@@ -363,7 +363,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             <option value="ai-efficiency-audit">Dedicated 48-Hour AI Efficiency Audit</option>
             <option value="comprehensive-it-audit">Comprehensive Enterprise IT Review</option>
           </select>
-          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-slate-400">
+          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-[#73716B]">
             <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">
               <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
             </svg>
@@ -376,11 +376,11 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         <div className="flex justify-between items-center mb-2">
           <label
             htmlFor="message"
-            className="block text-xs font-semibold uppercase tracking-wider text-slate-300"
+            className="block text-xs font-semibold uppercase tracking-wider text-[#141413]"
           >
-            Project Objectives & Current Stack <span className="text-cyan-400">*</span>
+            Project Objectives & Current Stack <span className="text-[#D97757]">*</span>
           </label>
-          <span className="text-[11px] text-slate-400">
+          <span className="text-[11px] text-[#73716B]">
             {formData.message.length} / 1000 chars
           </span>
         </div>
@@ -396,14 +396,14 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           aria-invalid={!!errors.message}
           aria-describedby={errors.message ? "message-error" : undefined}
           disabled={isSubmitting}
-          className={`w-full p-4 rounded-lg bg-slate-950/90 border text-slate-100 placeholder-slate-500 text-sm focus:outline-hidden transition-colors resize-y min-h-[110px] ${
+          className={`w-full p-4 rounded-lg bg-[#FAF8F5] border text-[#141413] placeholder-[#87867F] text-sm focus:outline-hidden transition-all resize-y min-h-[110px] ${
             errors.message
-              ? "border-red-500/80 focus:border-red-500"
-              : "border-slate-800 focus:border-cyan-400"
+              ? "border-red-500 focus:border-red-500 focus:ring-1 focus:ring-red-500/30"
+              : "border-[#DCD6CD] focus:border-[#D97757] focus:ring-1 focus:ring-[#D97757]/30"
           }`}
         />
         {errors.message && (
-          <p id="message-error" className="mt-1.5 text-xs text-red-400 flex items-center gap-1">
+          <p id="message-error" className="mt-1.5 text-xs text-red-600 flex items-center gap-1">
             <AlertCircle className="w-3.5 h-3.5" /> {errors.message}
           </p>
         )}
@@ -411,25 +411,25 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 
       {/* Submit button & Security assurance */}
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
-        <div className="flex items-center gap-2 text-xs text-slate-400">
-          <ShieldCheck className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+        <div className="flex items-center gap-2 text-xs text-[#73716B]">
+          <ShieldCheck className="w-4 h-4 text-[#D97757] flex-shrink-0" />
           <span>Enterprise Confidentiality & SOC2 Ready • Strict NDA on Request</span>
         </div>
 
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-xl font-semibold text-sm bg-gradient-to-r from-cyan-500 via-cyan-400 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-slate-950 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/30 transition-all cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
+          className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-xl font-bold text-sm bg-[#141413] hover:bg-[#2C2B28] text-white shadow-md shadow-black/5 hover:shadow-lg transition-all cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
         >
           {isSubmitting ? (
             <>
-              <Loader2 className="w-4 h-4 animate-spin text-slate-950" />
+              <Loader2 className="w-4 h-4 animate-spin text-white" />
               <span>Verifying & Sending...</span>
             </>
           ) : (
             <>
               <span>Schedule Architecture Consultation</span>
-              <Send className="w-4 h-4 text-slate-950" />
+              <Send className="w-4 h-4 text-white" />
             </>
           )}
         </button>

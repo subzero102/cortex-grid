@@ -18,7 +18,7 @@ const services = [
     id: "ai-operations",
     title: "AI Operations & Workflow Consulting",
     badge: "Enterprise AI & FinOps",
-    badgeColor: "bg-cyan-500/20 text-cyan-300 border-cyan-500/30",
+    badgeColor: "bg-[#F4ECE4] text-[#C75D3C] border-[#E8D8CC]",
     description:
       "Bridge the gap between experimental prototypes and cost-efficient production AI. We deploy sovereign RAG pipelines, dynamic model right-sizing, semantic caching, and strict token budgets.",
     icon: BrainCircuit,
@@ -34,7 +34,7 @@ const services = [
     id: "cloud",
     title: "On-Cloud Services & Hybrid Infrastructure",
     badge: "Azure • AWS • GCP",
-    badgeColor: "bg-blue-500/20 text-blue-300 border-blue-500/30",
+    badgeColor: "bg-[#EAEFF5] text-[#2D5A88] border-[#D1DFEC]",
     description:
       "Resilient, well-architected multi-cloud architectures. Greenfield migrations, FinOps cost auditing, automated Terraform IaC, and bare-metal hybrid virtualization.",
     icon: CloudCog,
@@ -50,7 +50,7 @@ const services = [
     id: "web-solutions",
     title: "Web Solutions, DNS & Modern Digital Platforms",
     badge: "High Performance Web",
-    badgeColor: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+    badgeColor: "bg-[#EAF3EC] text-[#28633D] border-[#D0E5D5]",
     description:
       "Ultra-fast corporate portals and web applications. Combining Next.js server rendering, Anycast DNS routing, DMARC/SPF/DKIM domain security, and Core Web Vitals optimization.",
     icon: Globe,
@@ -66,7 +66,7 @@ const services = [
     id: "email-solutions",
     title: "Email & Workplace Productivity Solutions",
     badge: "M365 & Google Workspace",
-    badgeColor: "bg-purple-500/20 text-purple-300 border-purple-500/30",
+    badgeColor: "bg-[#F1ECF5] text-[#5C3B78] border-[#DFD4EC]",
     description:
       "Zero-downtime mailbox migrations and secure enterprise collaboration. Tenant setup, Intune Mobile Device Management, and multi-layered anti-phishing hygiene.",
     icon: Mail,
@@ -82,7 +82,7 @@ const services = [
     id: "software-solutions",
     title: "Enterprise Software, CRM, ERP & POS",
     badge: "Business Systems",
-    badgeColor: "bg-amber-500/20 text-amber-300 border-amber-500/30",
+    badgeColor: "bg-[#F7EFE5] text-[#8C581E] border-[#ECDFCE]",
     description:
       "Unifying disconnected sales, accounting, and inventory silos. Custom integrations for Salesforce, HubSpot, cloud ERPs, and resilient cloud Point-of-Sale systems.",
     icon: Layers,
@@ -98,7 +98,7 @@ const services = [
     id: "professional-services",
     title: "Professional IT Services & 24/7 Support",
     badge: "Managed Services & vCIO",
-    badgeColor: "bg-indigo-500/20 text-indigo-300 border-indigo-500/30",
+    badgeColor: "bg-[#ECEEF5] text-[#3A4A7A] border-[#D2D7EC]",
     description:
       "Your dedicated IT command center. 24/7/365 tier 1–3 helpdesk, automated zero-day endpoint patch management, and executive Virtual CIO technology roadmaps.",
     icon: Headphones,
@@ -114,25 +114,25 @@ const services = [
 
 export const ServiceGrid: React.FC = () => {
   return (
-    <section id="services" className="py-24 bg-slate-900/60 relative">
+    <section id="services" className="py-24 bg-[#F3EFEA]/40 relative border-t border-[#E5DFD5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl">
-            <span className="text-xs font-bold uppercase tracking-widest text-cyan-400 mb-2 block">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#C75D3C] mb-2 block">
               Enterprise Practice Areas
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#141413] tracking-tight">
               Six Pillars of Modern Enterprise Operations
             </h2>
-            <p className="mt-4 text-base text-slate-300 leading-relaxed">
+            <p className="mt-4 text-base text-[#5E5D59] leading-relaxed">
               Every practice area is led by senior architects, backed by rigorous service level agreements, and designed to integrate seamlessly into your existing technology stack.
             </p>
           </div>
 
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-[#141413] hover:text-[#D97757] transition-colors"
           >
             <span>View Full Services Directory</span>
             <ArrowRight className="w-4 h-4" />
@@ -146,12 +146,12 @@ export const ServiceGrid: React.FC = () => {
             return (
               <div
                 key={service.id}
-                className="glass-panel glass-panel-hover rounded-2xl p-7 border border-slate-800 bg-slate-900/90 flex flex-col justify-between group"
+                className="rounded-2xl p-7 border border-[#E5DFD5] bg-white shadow-xs hover:shadow-md hover:border-[#DCD6CD] flex flex-col justify-between group transition-all"
               >
                 <div>
                   {/* Top Icon & Badge */}
                   <div className="flex items-center justify-between mb-5">
-                    <div className="w-12 h-12 rounded-xl bg-slate-800/90 border border-slate-700/80 group-hover:border-cyan-500/40 flex items-center justify-center text-cyan-400 transition-colors">
+                    <div className="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-[#E5DFD5] group-hover:border-[#E8D8CC] group-hover:bg-[#F4ECE4] flex items-center justify-center text-[#141413] group-hover:text-[#D97757] transition-colors">
                       <Icon className="w-6 h-6" />
                     </div>
                     <span
@@ -162,10 +162,10 @@ export const ServiceGrid: React.FC = () => {
                   </div>
 
                   {/* Title & Description */}
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">
+                  <h3 className="text-xl font-bold text-[#141413] mb-3 group-hover:text-[#D97757] transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-slate-300 text-sm leading-relaxed mb-6">
+                  <p className="text-[#5E5D59] text-sm leading-relaxed mb-6">
                     {service.description}
                   </p>
 
@@ -174,9 +174,9 @@ export const ServiceGrid: React.FC = () => {
                     {service.features.map((feature, fIdx) => (
                       <li
                         key={fIdx}
-                        className="flex items-start gap-2 text-xs text-slate-400"
+                        className="flex items-start gap-2 text-xs text-[#5E5D59]"
                       >
-                        <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#D97757] flex-shrink-0 mt-0.5" />
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -184,10 +184,10 @@ export const ServiceGrid: React.FC = () => {
                 </div>
 
                 {/* Link */}
-                <div className="pt-4 border-t border-slate-800">
+                <div className="pt-4 border-t border-[#E5DFD5]">
                   <Link
                     href={service.href}
-                    className="inline-flex items-center gap-2 text-xs font-bold text-cyan-400 hover:text-cyan-300 transition-colors group-hover:translate-x-1 duration-200"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-[#141413] hover:text-[#D97757] transition-colors group-hover:translate-x-1 duration-200"
                   >
                     <span>Explore Technical Architecture</span>
                     <ArrowRight className="w-3.5 h-3.5" />

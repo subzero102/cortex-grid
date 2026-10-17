@@ -102,8 +102,8 @@ export const Header: React.FC = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-200 ${
           isScrolled
-            ? "bg-slate-950/90 backdrop-blur-md border-b border-slate-800/80 shadow-lg shadow-black/30"
-            : "bg-slate-950/60 backdrop-blur-sm border-b border-slate-800/40"
+            ? "bg-[#FAF8F5]/95 backdrop-blur-md border-b border-[#E5DFD5] shadow-xs"
+            : "bg-[#FAF8F5]/80 backdrop-blur-sm border-b border-[#E5DFD5]/60"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -114,14 +114,14 @@ export const Header: React.FC = () => {
               className="flex items-center gap-3 group focus:outline-hidden"
               aria-label="Cortex Grid Consulting Home"
             >
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 via-cyan-400 to-blue-600 flex items-center justify-center p-2 shadow-lg shadow-cyan-500/25 group-hover:shadow-cyan-400/40 transition-all">
-                <BrainCircuit className="w-full h-full text-slate-950" />
+              <div className="w-10 h-10 rounded-xl bg-[#141413] flex items-center justify-center p-2 shadow-sm text-white group-hover:bg-[#C75D3C] transition-colors">
+                <BrainCircuit className="w-full h-full text-white" />
               </div>
               <div className="flex flex-col">
-                <span className="font-extrabold text-base tracking-widest text-white uppercase leading-none font-mono">
+                <span className="font-extrabold text-base tracking-widest text-[#141413] uppercase leading-none font-mono">
                   CORTEX GRID
                 </span>
-                <span className="text-[11px] text-cyan-400 tracking-wider uppercase font-semibold mt-0.5">
+                <span className="text-[11px] text-[#C75D3C] tracking-wider uppercase font-semibold mt-0.5">
                   Consulting
                 </span>
               </div>
@@ -140,12 +140,12 @@ export const Header: React.FC = () => {
                   onMouseEnter={() => setIsServicesOpen(true)}
                   aria-expanded={isServicesOpen}
                   aria-haspopup="true"
-                  className="inline-flex items-center gap-1 px-3.5 py-2 rounded-lg text-sm font-medium text-slate-200 hover:text-white hover:bg-slate-800/60 transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-1 px-3.5 py-2 rounded-lg text-sm font-medium text-[#5E5D59] hover:text-[#141413] hover:bg-[#F0ECE5] transition-colors cursor-pointer"
                 >
                   <span>Services</span>
                   <ChevronDown
-                    className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
-                      isServicesOpen ? "rotate-180 text-cyan-400" : ""
+                    className={`w-4 h-4 text-[#87867F] transition-transform duration-200 ${
+                      isServicesOpen ? "rotate-180 text-[#C75D3C]" : ""
                     }`}
                   />
                 </button>
@@ -154,16 +154,16 @@ export const Header: React.FC = () => {
                 {isServicesOpen && (
                   <div
                     onMouseLeave={() => setIsServicesOpen(false)}
-                    className="absolute top-full left-0 w-[520px] mt-2 p-4 rounded-2xl glass-panel bg-slate-900/95 border border-slate-700/80 shadow-2xl z-50 animate-in fade-in zoom-in-95 duration-150"
+                    className="absolute top-full left-0 w-[520px] mt-2 p-4 rounded-2xl bg-white border border-[#E5DFD5] shadow-xl z-50 animate-in fade-in zoom-in-95 duration-150"
                   >
-                    <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-800 px-2">
-                      <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                    <div className="flex items-center justify-between pb-3 mb-3 border-b border-[#ECE7DE] px-2">
+                      <span className="text-xs font-bold uppercase tracking-wider text-[#73716B]">
                         Enterprise Practice Areas
                       </span>
                       <Link
                         href="/services"
                         onClick={() => setIsServicesOpen(false)}
-                        className="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1"
+                        className="text-xs font-semibold text-[#C75D3C] hover:text-[#B34B2C] flex items-center gap-1"
                       >
                         All Services Directory <ArrowRight className="w-3 h-3" />
                       </Link>
@@ -177,23 +177,23 @@ export const Header: React.FC = () => {
                             key={item.href}
                             href={item.href}
                             onClick={() => setIsServicesOpen(false)}
-                            className="flex items-start gap-3 p-2.5 rounded-xl text-left hover:bg-slate-800/80 transition-colors group"
+                            className="flex items-start gap-3 p-2.5 rounded-xl text-left hover:bg-[#FAF8F5] border border-transparent hover:border-[#EAE5DC] transition-colors group"
                           >
-                            <div className="p-2 rounded-lg bg-slate-800 text-cyan-400 group-hover:bg-cyan-500/20 group-hover:text-cyan-300 transition-colors mt-0.5 flex-shrink-0">
+                            <div className="p-2 rounded-lg bg-[#F4ECE4] text-[#C75D3C] group-hover:bg-[#EDDFD2] transition-colors mt-0.5 flex-shrink-0">
                               <Icon className="w-4 h-4" />
                             </div>
                             <div>
                               <div className="flex items-center gap-1.5">
-                                <span className="text-sm font-medium text-slate-100 group-hover:text-white">
+                                <span className="text-sm font-semibold text-[#141413] group-hover:text-[#C75D3C] transition-colors">
                                   {item.name}
                                 </span>
                                 {item.badge && (
-                                  <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
+                                  <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full bg-[#F4ECE4] text-[#C75D3C] border border-[#E8D8CC]">
                                     {item.badge}
                                   </span>
                                 )}
                               </div>
-                              <p className="text-[11px] text-slate-400 line-clamp-1 leading-snug mt-0.5">
+                              <p className="text-[11px] text-[#73716B] line-clamp-1 leading-snug mt-0.5">
                                 {item.description}
                               </p>
                             </div>
@@ -203,15 +203,15 @@ export const Header: React.FC = () => {
                     </div>
 
                     {/* Dropdown Footer CTA */}
-                    <div className="mt-3 pt-3 border-t border-slate-800/80 bg-slate-950/50 -mx-4 -mb-4 p-3 rounded-b-2xl flex items-center justify-between px-5">
-                      <div className="flex items-center gap-2 text-xs text-slate-300">
-                        <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+                    <div className="mt-3 pt-3 border-t border-[#ECE7DE] bg-[#FAF8F5] -mx-4 -mb-4 p-3 rounded-b-2xl flex items-center justify-between px-5">
+                      <div className="flex items-center gap-2 text-xs text-[#5E5D59]">
+                        <Sparkles className="w-3.5 h-3.5 text-[#C75D3C]" />
                         <span>Ready to audit your AI token or cloud bills?</span>
                       </div>
                       <Link
                         href="/services/ai-operations"
                         onClick={() => setIsServicesOpen(false)}
-                        className="text-xs font-bold text-cyan-400 hover:text-cyan-300"
+                        className="text-xs font-bold text-[#C75D3C] hover:text-[#B34B2C]"
                       >
                         Book 48-Hour AI Audit →
                       </Link>
@@ -223,7 +223,7 @@ export const Header: React.FC = () => {
               {/* About */}
               <Link
                 href="/about"
-                className="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-200 hover:text-white hover:bg-slate-800/60 transition-colors"
+                className="px-3.5 py-2 rounded-lg text-sm font-medium text-[#5E5D59] hover:text-[#141413] hover:bg-[#F0ECE5] transition-colors"
               >
                 About Us
               </Link>
@@ -231,7 +231,7 @@ export const Header: React.FC = () => {
               {/* Contact */}
               <Link
                 href="/contact"
-                className="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-200 hover:text-white hover:bg-slate-800/60 transition-colors"
+                className="px-3.5 py-2 rounded-lg text-sm font-medium text-[#5E5D59] hover:text-[#141413] hover:bg-[#F0ECE5] transition-colors"
               >
                 Contact
               </Link>
@@ -242,16 +242,16 @@ export const Header: React.FC = () => {
               {/* Direct Support Phone */}
               <a
                 href="tel:+919911560093"
-                className="hidden xl:inline-flex items-center gap-2 text-xs text-slate-300 hover:text-cyan-400 transition-colors py-2 px-3 rounded-lg border border-slate-800 hover:border-slate-700 bg-slate-900/60"
+                className="hidden xl:inline-flex items-center gap-2 text-xs text-[#141413] hover:text-[#C75D3C] transition-colors py-2 px-3 rounded-lg border border-[#DCD6CD] hover:border-[#141413] bg-white font-mono shadow-xs"
               >
-                <PhoneCall className="w-3.5 h-3.5 text-cyan-400" />
-                <span className="font-mono">+919911560093</span>
+                <PhoneCall className="w-3.5 h-3.5 text-[#C75D3C]" />
+                <span>+919911560093</span>
               </a>
 
               {/* Consultation CTA */}
               <Link
                 href="/contact"
-                className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-xs tracking-wide uppercase bg-gradient-to-r from-cyan-500 via-cyan-400 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-slate-950 shadow-md shadow-cyan-500/20 hover:shadow-cyan-400/30 transition-all cursor-pointer"
+                className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-xs tracking-wide uppercase bg-[#141413] hover:bg-[#2C2B28] text-[#FAF8F5] shadow-xs transition-all cursor-pointer"
               >
                 <span>Schedule Consultation</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -264,7 +264,7 @@ export const Header: React.FC = () => {
                 aria-label="Open mobile navigation menu"
                 aria-expanded={isMobileDrawerOpen}
                 aria-controls="mobile-navigation-drawer"
-                className="lg:hidden p-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-hidden transition-colors"
+                className="lg:hidden p-2 rounded-xl text-[#141413] hover:bg-[#F0ECE5] focus:outline-hidden transition-colors"
               >
                 <Menu className="w-6 h-6" />
               </button>

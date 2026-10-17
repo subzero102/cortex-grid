@@ -5,7 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { OrganizationJsonLd } from "@/components/seo/JsonLd";
 
 export const viewport: Viewport = {
-  themeColor: "#080c14",
+  themeColor: "#FAF8F5",
   width: "device-width",
   initialScale: 1
 };
@@ -82,14 +82,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className="light scroll-smooth">
       <head>
         <OrganizationJsonLd />
       </head>
-      <body className="min-h-screen bg-[#080c14] text-slate-100 flex flex-col font-sans antialiased selection:bg-cyan-500/30 selection:text-cyan-200">
+      <body className="min-h-screen bg-[#FAF8F5] text-[#141413] flex flex-col font-sans antialiased selection:bg-[#D97757]/20 selection:text-[#C75D3C]">
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-cyan-500 focus:text-slate-950 focus:rounded-lg focus:font-bold focus:shadow-xl"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#141413] focus:text-[#FAF8F5] focus:rounded-lg focus:font-bold focus:shadow-xl"
         >
           Skip to main content
         </a>
