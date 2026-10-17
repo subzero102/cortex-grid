@@ -1,0 +1,29 @@
+services:
+  cortex-grid:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cortex-grid:latest
+    container_name: cortex-grid-app
+    restart: unless-stopped
+    ports:
+      # Map host port (default 3000) to container port 3000
+      # If using Nginx/Caddy on Hostinger VPS as reverse proxy with SSL, proxy to http://127.0.0.1:3000
+      - "${PORT:-3000}:3000"
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - HOSTNAME=0.0.0.0
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1:3000/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

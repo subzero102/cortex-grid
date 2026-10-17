@@ -10,8 +10,10 @@ export const viewport: Viewport = {
   initialScale: 1
 };
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://cortexgridconsulting.com";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cortexgrid.com"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Cortex Grid Consulting | Future-Ready IT & Cost-Effective AI Operations",
     template: "%s | Cortex Grid Consulting"

@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { servicesData } from "@/data/servicesData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://cortexgrid.com";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://cortexgridconsulting.com";
   const currentDate = new Date();
 
   // Core static pages

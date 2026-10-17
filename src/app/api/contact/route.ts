@@ -60,9 +60,7 @@ export async function POST(request: Request) {
       );
     }
 
-    // In a real production deployment, this would trigger an email via Resend / AWS SES / SendGrid
-    // or push to a CRM like HubSpot / Salesforce.
-    console.log("New Qualified Lead Submission:", {
+    const leadData = {
       fullName,
       email,
       phone: phone || "Not provided",
@@ -71,7 +69,59 @@ export async function POST(request: Request) {
       budget: budget || "Not specified",
       message,
       receivedAt: new Date().toISOString()
-    });
+    };
+
+    console.log("New Qualified Lead Submission:", leadData);
+
+    // Optional 1: Forward to Discord / Slack / Zapier / n8n Webhook
+    const webhookUrl = process.env.LEAD_NOTIFICATION_WEBHOOK_URL;
+    if (webhookUrl) {
+      try {
+        await fetch(webhookUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            content: `🚀 **New Consultation Request**: ${fullName} from **${company}**\n**Practice Area**: ${service}\n**Email**: ${email} | **Phone**: ${phone || "N/A"}\n**Message**: ${message}`
+          })
+        });
+      } catch (webhookErr) {
+        console.error("Failed to forward lead to webhook:", webhookErr);
+      }
+    }
+
+    // Optional 2: Send Email via Resend if RESEND_API_KEY is configured
+    const resendApiKey = process.env.RESEND_API_KEY;
+    if (resendApiKey) {
+      const recipient = process.env.CONTACT_NOTIFICATION_EMAIL || "alliances@cortexgridconsulting.com";
+      try {
+        await fetch("https://api.resend.com/emails", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${resendApiKey}`
+          },
+          body: JSON.stringify({
+            from: "Cortex Grid Web <onboarding@resend.dev>",
+            to: [recipient],
+            subject: `New Inbound Lead: ${company} (${service})`,
+            html: `
+              <h2>New Consultation Request</h2>
+              <p><strong>Name:</strong> ${fullName}</p>
+              <p><strong>Company:</strong> ${company}</p>
+              <p><strong>Email:</strong> ${email}</p>
+              <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
+              <p><strong>Service:</strong> ${service}</p>
+              <p><strong>Message:</strong></p>
+              <p>${message.replace(/\n/g, "<br>")}</p>
+              <hr/>
+              <p><small>Received at ${new Date().toUTCString()} via cortexgridconsulting.com</small></p>
+            `
+          })
+        });
+      } catch (emailErr) {
+        console.error("Failed to dispatch email via Resend:", emailErr);
+      }
+    }
 
     return NextResponse.json(
       {
