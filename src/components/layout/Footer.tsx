@@ -165,14 +165,6 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2.5 text-sm">
               <li>
                 <Link
-                  href="/roi-calculator"
-                  className="hover:text-cyan-400 transition-colors"
-                >
-                  AI ROI & FinOps Calculator
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/services/ai-operations#audit"
                   className="hover:text-cyan-400 transition-colors"
                 >

@@ -96,10 +96,10 @@ export const ServiceDetailTemplate: React.FC<ServiceDetailTemplateProps> = ({
               </a>
 
               <Link
-                href="/roi-calculator"
+                href="/services"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 transition-all"
               >
-                <span>Calculate Cost Savings</span>
+                <span>View All Practice Areas</span>
               </Link>
             </div>
           </div>

@@ -10,7 +10,6 @@ import {
   Mail,
   Layers,
   Headphones,
-  Calculator,
   Info,
   PhoneCall,
   ArrowRight,
@@ -215,16 +214,6 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({ isOpen, onClose }) =
                   <Layers className="w-4 h-4" />
                 </div>
                 <span>All Services Overview</span>
-              </Link>
-              <Link
-                href="/roi-calculator"
-                onClick={onClose}
-                className="flex items-center gap-3 p-2.5 rounded-xl text-slate-300 hover:bg-slate-800 hover:text-white text-sm"
-              >
-                <div className="p-1.5 rounded-md bg-slate-800 text-slate-300">
-                  <Calculator className="w-4 h-4" />
-                </div>
-                <span>AI ROI & FinOps Calculator</span>
               </Link>
               <Link
                 href="/about"

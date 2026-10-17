@@ -6,7 +6,7 @@ import {
   ArrowRight,
   TrendingDown,
   Sparkles,
-  Calculator,
+  Layers,
   Terminal,
   Activity,
   CheckCircle2
@@ -55,11 +55,11 @@ export const HeroSection: React.FC = () => {
               </Link>
 
               <Link
-                href="/roi-calculator"
+                href="/services"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700/80 transition-all cursor-pointer"
               >
-                <Calculator className="w-4 h-4 text-cyan-400" />
-                <span>Estimate Token Savings</span>
+                <Layers className="w-4 h-4 text-cyan-400" />
+                <span>Explore Practice Areas</span>
               </Link>
             </div>
 

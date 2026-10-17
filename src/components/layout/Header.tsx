@@ -13,8 +13,7 @@ import {
   Mail,
   Layers,
   Headphones,
-  ArrowRight,
-  Calculator
+  ArrowRight
 } from "lucide-react";
 import { MobileDrawer } from "./MobileDrawer";
 
@@ -220,15 +219,6 @@ export const Header: React.FC = () => {
                   </div>
                 )}
               </div>
-
-              {/* ROI Calculator */}
-              <Link
-                href="/roi-calculator"
-                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-medium text-slate-200 hover:text-white hover:bg-slate-800/60 transition-colors"
-              >
-                <Calculator className="w-4 h-4 text-cyan-400" />
-                <span>ROI Calculator</span>
-              </Link>
 
               {/* About */}
               <Link
