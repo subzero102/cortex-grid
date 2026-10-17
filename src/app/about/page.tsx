@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "Learn about Cortex Grid Consulting: our mission, architectural philosophy, security certifications, and leadership team dedicated to future-ready IT and cost-governed AI operations.",
   keywords: [
     "About Cortex Grid",
-    "IT Consulting Austin",
+    "Enterprise IT Consulting",
     "Enterprise AI Operations",
     "Cloud Architecture Firm",
     "ISO 27001 IT Advisory"

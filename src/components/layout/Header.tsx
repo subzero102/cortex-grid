@@ -241,11 +241,11 @@ export const Header: React.FC = () => {
             <div className="flex items-center gap-4">
               {/* Direct Support Phone */}
               <a
-                href="tel:+18005550199"
+                href="tel:+919911560093"
                 className="hidden xl:inline-flex items-center gap-2 text-xs text-slate-300 hover:text-cyan-400 transition-colors py-2 px-3 rounded-lg border border-slate-800 hover:border-slate-700 bg-slate-900/60"
               >
                 <PhoneCall className="w-3.5 h-3.5 text-cyan-400" />
-                <span className="font-mono">+1 (800) 555-0199</span>
+                <span className="font-mono">+919911560093</span>
               </a>
 
               {/* Consultation CTA */}

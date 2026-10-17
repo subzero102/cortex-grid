@@ -250,14 +250,25 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({ isOpen, onClose }) =
             <ArrowRight className="w-4 h-4" />
           </Link>
 
-          <div className="text-center">
-            <a
-              href="tel:+18005550199"
-              className="text-xs text-slate-400 hover:text-cyan-400 inline-flex items-center gap-1.5 transition-colors"
-            >
-              <PhoneCall className="w-3.5 h-3.5" />
-              Direct Support: +1 (800) 555-0199
-            </a>
+          <div className="text-center space-y-1.5">
+            <div>
+              <a
+                href="tel:+919911560093"
+                className="text-xs text-slate-400 hover:text-cyan-400 inline-flex items-center gap-1.5 transition-colors font-mono"
+              >
+                <PhoneCall className="w-3.5 h-3.5" />
+                Phone: +919911560093
+              </a>
+            </div>
+            <div>
+              <a
+                href="mailto:alliances@cortexgridconsulting.com"
+                className="text-xs text-slate-400 hover:text-cyan-400 inline-flex items-center gap-1.5 transition-colors font-mono"
+              >
+                <Mail className="w-3.5 h-3.5" />
+                alliances@cortexgridconsulting.com
+              </a>
+            </div>
           </div>
 
           <div className="flex items-center justify-center gap-1.5 text-[11px] text-slate-400">

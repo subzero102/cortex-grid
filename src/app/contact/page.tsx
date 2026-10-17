@@ -3,7 +3,6 @@ import { ContactForm } from "@/components/forms/ContactForm";
 import {
   PhoneCall,
   Mail,
-  MapPin,
   Clock,
   ShieldCheck,
   CheckCircle2,
@@ -18,7 +17,7 @@ export const metadata: Metadata = {
     "Contact Cortex Grid",
     "Schedule IT Consultation",
     "Book AI Audit",
-    "Austin IT Consulting",
+    "Enterprise IT Consulting",
     "Enterprise Cloud Support"
   ]
 };
@@ -60,12 +59,12 @@ export default function ContactPage() {
                       <PhoneCall className="w-4 h-4" />
                     </div>
                     <div>
-                      <span className="text-xs text-slate-400 block">Toll-Free Direct Hotline:</span>
+                      <span className="text-xs text-slate-400 block">Phone number:</span>
                       <a
-                        href="tel:+18005550199"
+                        href="tel:+919911560093"
                         className="font-bold text-white hover:text-cyan-400 transition-colors font-mono"
                       >
-                        +1 (800) 555-0199
+                        +919911560093
                       </a>
                     </div>
                   </li>
@@ -75,26 +74,13 @@ export default function ContactPage() {
                       <Mail className="w-4 h-4" />
                     </div>
                     <div>
-                      <span className="text-xs text-slate-400 block">Advisory & Audit Inquiries:</span>
+                      <span className="text-xs text-slate-400 block">Alliances & Inquiries:</span>
                       <a
-                        href="mailto:advisory@cortexgrid.com"
+                        href="mailto:alliances@cortexgridconsulting.com"
                         className="font-bold text-white hover:text-cyan-400 transition-colors"
                       >
-                        advisory@cortexgrid.com
+                        alliances@cortexgridconsulting.com
                       </a>
-                    </div>
-                  </li>
-
-                  <li className="flex items-start gap-3">
-                    <div className="p-2 rounded-lg bg-cyan-500/10 text-cyan-400 mt-0.5">
-                      <MapPin className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <span className="text-xs text-slate-400 block">Global Headquarters:</span>
-                      <span className="text-white font-medium">
-                        100 Innovation Way, Suite 400<br />
-                        Austin, TX 78701
-                      </span>
                     </div>
                   </li>
 

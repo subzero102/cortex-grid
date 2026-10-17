@@ -6,7 +6,6 @@ import {
   BrainCircuit,
   PhoneCall,
   Mail,
-  MapPin,
   Clock,
   ShieldCheck,
   Send,
@@ -216,24 +215,20 @@ export const Footer: React.FC = () => {
               <li className="flex items-start gap-2.5">
                 <PhoneCall className="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" />
                 <a
-                  href="tel:+18005550199"
+                  href="tel:+919911560093"
                   className="hover:text-cyan-400 transition-colors font-mono"
                 >
-                  +1 (800) 555-0199 (Toll Free)
+                  Phone: +919911560093
                 </a>
               </li>
               <li className="flex items-start gap-2.5">
                 <Mail className="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" />
                 <a
-                  href="mailto:contact@cortexgrid.com"
+                  href="mailto:alliances@cortexgridconsulting.com"
                   className="hover:text-cyan-400 transition-colors"
                 >
-                  advisory@cortexgrid.com
+                  alliances@cortexgridconsulting.com
                 </a>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" />
-                <span>100 Innovation Way, Suite 400, Austin, TX 78701</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <Clock className="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" />

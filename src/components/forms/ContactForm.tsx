@@ -15,7 +15,7 @@ interface FormState {
   phone: string;
   company: string;
   service: string;
-  budget: string;
+  budget?: string;
   message: string;
   _gotcha: string; // Honeypot spam trap
 }
@@ -39,7 +39,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
     phone: "",
     company: "",
     service: initialService,
-    budget: "$25,000 - $50,000",
+    budget: "",
     message: "",
     _gotcha: ""
   });
@@ -132,7 +132,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
       phone: "",
       company: "",
       service: initialService,
-      budget: "$25,000 - $50,000",
+      budget: "",
       message: "",
       _gotcha: ""
     });
@@ -337,69 +337,36 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
-        {/* Service Interested In */}
-        <div>
-          <label
-            htmlFor="service"
-            className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2"
+      {/* Service Interested In */}
+      <div className="mb-5">
+        <label
+          htmlFor="service"
+          className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2"
+        >
+          Practice Area <span className="text-cyan-400">*</span>
+        </label>
+        <div className="relative">
+          <select
+            id="service"
+            name="service"
+            value={formData.service}
+            onChange={handleChange}
+            disabled={isSubmitting}
+            className="w-full min-h-[48px] px-4 py-2.5 rounded-lg bg-slate-950/90 border border-slate-800 text-slate-100 text-sm focus:outline-hidden focus:border-cyan-400 transition-colors appearance-none cursor-pointer pr-10"
           >
-            Practice Area <span className="text-cyan-400">*</span>
-          </label>
-          <div className="relative">
-            <select
-              id="service"
-              name="service"
-              value={formData.service}
-              onChange={handleChange}
-              disabled={isSubmitting}
-              className="w-full min-h-[48px] px-4 py-2.5 rounded-lg bg-slate-950/90 border border-slate-800 text-slate-100 text-sm focus:outline-hidden focus:border-cyan-400 transition-colors appearance-none cursor-pointer pr-10"
-            >
-              <option value="ai-operations">AI Operations & FinOps Consulting</option>
-              <option value="cloud">Cloud Solutions (Azure, AWS, GCP)</option>
-              <option value="web-solutions">Web Solutions, DNS & Modern Portals</option>
-              <option value="email-solutions">Workplace & Email Productivity (M365/Google)</option>
-              <option value="software-solutions">Enterprise Software (CRM, ERP, POS)</option>
-              <option value="professional-services">Professional IT & 24/7 Managed Services</option>
-              <option value="ai-efficiency-audit">Dedicated 48-Hour AI Efficiency Audit</option>
-              <option value="comprehensive-it-audit">Comprehensive Enterprise IT Review</option>
-            </select>
-            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-slate-400">
-              <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
-              </svg>
-            </div>
-          </div>
-        </div>
-
-        {/* Budget / Project Timeline */}
-        <div>
-          <label
-            htmlFor="budget"
-            className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2"
-          >
-            Estimated Scope / Budget
-          </label>
-          <div className="relative">
-            <select
-              id="budget"
-              name="budget"
-              value={formData.budget}
-              onChange={handleChange}
-              disabled={isSubmitting}
-              className="w-full min-h-[48px] px-4 py-2.5 rounded-lg bg-slate-950/90 border border-slate-800 text-slate-100 text-sm focus:outline-hidden focus:border-cyan-400 transition-colors appearance-none cursor-pointer pr-10"
-            >
-              <option value="< $10,000">Seed / Audit (&lt; $10k)</option>
-              <option value="$10,000 - $25,000">$10,000 – $25,000</option>
-              <option value="$25,000 - $50,000">$25,000 – $50,000 (Standard Pilot)</option>
-              <option value="$50,000 - $100,000">$50,000 – $100,000 (Enterprise Deployment)</option>
-              <option value="$100,000+">$100,000+ (Full Multi-Cloud & AI Overhaul)</option>
-            </select>
-            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-slate-400">
-              <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
-              </svg>
-            </div>
+            <option value="ai-operations">AI Operations & FinOps Consulting</option>
+            <option value="cloud">Cloud Solutions (Azure, AWS, GCP)</option>
+            <option value="web-solutions">Web Solutions, DNS & Modern Portals</option>
+            <option value="email-solutions">Workplace & Email Productivity (M365/Google)</option>
+            <option value="software-solutions">Enterprise Software (CRM, ERP, POS)</option>
+            <option value="professional-services">Professional IT & 24/7 Managed Services</option>
+            <option value="ai-efficiency-audit">Dedicated 48-Hour AI Efficiency Audit</option>
+            <option value="comprehensive-it-audit">Comprehensive Enterprise IT Review</option>
+          </select>
+          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-slate-400">
+            <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+              <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+            </svg>
           </div>
         </div>
       </div>

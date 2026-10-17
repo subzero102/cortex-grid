@@ -53,7 +53,7 @@ export default function PrivacyPage() {
             </p>
             <ul className="list-disc pl-5 space-y-1.5 text-slate-400">
               <li>Full Name, Corporate Email Address, Direct Phone Number, and Organization Name.</li>
-              <li>Selected Practice Area, Estimated Scope/Budget, and Project Description.</li>
+              <li>Selected Practice Area and Project Objectives/Description.</li>
               <li>Technical telemetry and error logs necessary to ensure website performance and prevent spam abuse.</li>
             </ul>
           </section>
@@ -78,7 +78,7 @@ export default function PrivacyPage() {
               To request a copy of your records, initiate data deletion, or discuss our security posture, please contact our Data Protection Office at:
             </p>
             <p className="text-white font-mono">
-              privacy@cortexgrid.com • 100 Innovation Way, Suite 400, Austin, TX 78701
+              alliances@cortexgridconsulting.com
             </p>
           </section>
         </div>

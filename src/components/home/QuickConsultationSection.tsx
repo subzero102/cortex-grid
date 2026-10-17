@@ -4,6 +4,7 @@ import React from "react";
 import { ContactForm } from "@/components/forms/ContactForm";
 import {
   PhoneCall,
+  Mail,
   CheckCircle2,
   Calendar
 } from "lucide-react";
@@ -56,21 +57,40 @@ export const QuickConsultationSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Direct Hotline Box */}
-            <div className="p-4 rounded-xl bg-slate-900/40 border border-slate-800 flex items-center gap-4">
-              <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 flex-shrink-0">
-                <PhoneCall className="w-5 h-5" />
+            {/* Direct Contact Coordinates */}
+            <div className="space-y-3">
+              <div className="p-4 rounded-xl bg-slate-900/40 border border-slate-800 flex items-center gap-4">
+                <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 flex-shrink-0">
+                  <PhoneCall className="w-5 h-5" />
+                </div>
+                <div>
+                  <span className="text-xs text-slate-400 block">
+                    Phone number:
+                  </span>
+                  <a
+                    href="tel:+919911560093"
+                    className="text-sm font-bold text-white hover:text-cyan-400 transition-colors font-mono"
+                  >
+                    +919911560093
+                  </a>
+                </div>
               </div>
-              <div>
-                <span className="text-xs text-slate-400 block">
-                  Prefer direct phone conversation?
-                </span>
-                <a
-                  href="tel:+18005550199"
-                  className="text-sm font-bold text-white hover:text-cyan-400 transition-colors font-mono"
-                >
-                  +1 (800) 555-0199
-                </a>
+
+              <div className="p-4 rounded-xl bg-slate-900/40 border border-slate-800 flex items-center gap-4">
+                <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 flex-shrink-0">
+                  <Mail className="w-5 h-5" />
+                </div>
+                <div>
+                  <span className="text-xs text-slate-400 block">
+                    Direct Email Inquiries:
+                  </span>
+                  <a
+                    href="mailto:alliances@cortexgridconsulting.com"
+                    className="text-sm font-bold text-white hover:text-cyan-400 transition-colors font-mono"
+                  >
+                    alliances@cortexgridconsulting.com
+                  </a>
+                </div>
               </div>
             </div>
           </div>

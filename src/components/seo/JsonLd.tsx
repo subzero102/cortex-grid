@@ -18,9 +18,9 @@ export const OrganizationJsonLd: React.FC = () => {
         "contactPoint": [
           {
             "@type": "ContactPoint",
-            "telephone": "+1-800-555-0199",
+            "telephone": "+919911560093",
             "contactType": "customer service",
-            "areaServed": ["US", "CA", "GB", "EU"],
+            "areaServed": ["Global", "US", "CA", "GB", "EU", "IN"],
             "availableLanguage": ["en"]
           }
         ]
@@ -30,16 +30,8 @@ export const OrganizationJsonLd: React.FC = () => {
         "@id": "https://cortexgrid.com/#professionalService",
         "name": "Cortex Grid Consulting",
         "image": "https://cortexgrid.com/og-image.png",
-        "telephone": "+1-800-555-0199",
-        "email": "advisory@cortexgrid.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "100 Innovation Way, Suite 400",
-          "addressLocality": "Austin",
-          "addressRegion": "TX",
-          "postalCode": "78701",
-          "addressCountry": "US"
-        },
+        "telephone": "+919911560093",
+        "email": "alliances@cortexgridconsulting.com",
         "priceRange": "$$$$",
         "openingHours": "Mo-Su 00:00-24:00",
         "description": "Enterprise IT Consulting & Cost-Effective AI Operations, multi-cloud migrations, FinOps, and sovereign RAG architectures."

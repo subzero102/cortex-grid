@@ -58,7 +58,7 @@ export default function TermsPage() {
               For legal inquiries regarding these terms or master service contracts:
             </p>
             <p className="text-white font-mono">
-              legal@cortexgrid.com • 100 Innovation Way, Suite 400, Austin, TX 78701
+              alliances@cortexgridconsulting.com
             </p>
           </section>
         </div>
