@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 export async function POST(request: Request) {
   try {
@@ -89,21 +90,77 @@ export async function POST(request: Request) {
       }
     }
 
-    // Optional 2: Send Email via Resend if RESEND_API_KEY is configured
+    // Destination email for inbound consultation requests
+    const recipient = process.env.CONTACT_NOTIFICATION_EMAIL || "alliances@cortexgridconsulting.com";
+
+    // Transport Option A: Direct SMTP (Hostinger / Titan / Google Workspace / M365)
+    const smtpHost = process.env.SMTP_HOST;
+    const smtpUser = process.env.SMTP_USER;
+    const smtpPass = process.env.SMTP_PASS;
+
+    if (smtpHost && smtpUser && smtpPass) {
+      try {
+        const port = Number(process.env.SMTP_PORT) || 465;
+        const secure = process.env.SMTP_SECURE ? process.env.SMTP_SECURE === "true" : port === 465;
+        const transporter = nodemailer.createTransport({
+          host: smtpHost,
+          port,
+          secure,
+          auth: {
+            user: smtpUser,
+            pass: smtpPass,
+          },
+        });
+
+        const fromAddress = process.env.SMTP_FROM || `"Cortex Grid Inbound" <${smtpUser}>`;
+
+        await transporter.sendMail({
+          from: fromAddress,
+          to: recipient,
+          replyTo: email,
+          subject: `[Cortex Grid Inbound] New Lead: ${company} (${service})`,
+          text: `New Consultation Request\n\nName: ${fullName}\nCompany: ${company}\nEmail: ${email}\nPhone: ${phone || "Not provided"}\nService: ${service}\nMessage:\n${message}\n\nReceived at ${new Date().toUTCString()} via cortexgridconsulting.com`,
+          html: `
+            <div style="font-family: Arial, sans-serif; max-width: 600px; color: #141413; line-height: 1.6;">
+              <h2 style="color: #D97757; border-bottom: 2px solid #E5DFD5; padding-bottom: 8px;">New Enterprise Consultation Request</h2>
+              <table style="width: 100%; border-collapse: collapse; margin-bottom: 16px;">
+                <tr><td style="padding: 6px 0; color: #73716B; width: 140px;"><strong>Client Name:</strong></td><td>${fullName}</td></tr>
+                <tr><td style="padding: 6px 0; color: #73716B;"><strong>Company:</strong></td><td>${company}</td></tr>
+                <tr><td style="padding: 6px 0; color: #73716B;"><strong>Corporate Email:</strong></td><td><a href="mailto:${email}" style="color: #D97757;">${email}</a></td></tr>
+                <tr><td style="padding: 6px 0; color: #73716B;"><strong>Direct Phone:</strong></td><td>${phone || "Not provided"}</td></tr>
+                <tr><td style="padding: 6px 0; color: #73716B;"><strong>Practice Area:</strong></td><td>${service}</td></tr>
+              </table>
+              <div style="margin-top: 12px;">
+                <strong>Project Objectives & Context:</strong>
+                <div style="background: #FAF8F5; border-left: 4px solid #D97757; padding: 12px; margin-top: 6px; border-radius: 4px; white-space: pre-wrap;">${message}</div>
+              </div>
+              <hr style="border: 0; border-top: 1px solid #E5DFD5; margin-top: 24px;" />
+              <p style="font-size: 11px; color: #87867F;">Dispatched by Cortex Grid Consulting Lead Router at ${new Date().toUTCString()}</p>
+            </div>
+          `,
+        });
+        console.log(`[Email Dispatch] Successfully sent consultation notification via SMTP (${smtpHost}) to ${recipient}`);
+      } catch (smtpErr) {
+        console.error("[Email Dispatch] Failed to dispatch email via SMTP:", smtpErr);
+      }
+    }
+
+    // Transport Option B: Send Email via Resend REST API if RESEND_API_KEY is configured
     const resendApiKey = process.env.RESEND_API_KEY;
     if (resendApiKey) {
-      const recipient = process.env.CONTACT_NOTIFICATION_EMAIL || "alliances@cortexgridconsulting.com";
       try {
-        await fetch("https://api.resend.com/emails", {
+        const fromAddress = process.env.RESEND_FROM || "Cortex Grid Web <onboarding@resend.dev>";
+        const resendRes = await fetch("https://api.resend.com/emails", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${resendApiKey}`
           },
           body: JSON.stringify({
-            from: "Cortex Grid Web <onboarding@resend.dev>",
+            from: fromAddress,
             to: [recipient],
-            subject: `New Inbound Lead: ${company} (${service})`,
+            reply_to: email,
+            subject: `[Cortex Grid Inbound] New Lead: ${company} (${service})`,
             html: `
               <h2>New Consultation Request</h2>
               <p><strong>Name:</strong> ${fullName}</p>
@@ -118,9 +175,22 @@ export async function POST(request: Request) {
             `
           })
         });
+        if (!resendRes.ok) {
+          const errBody = await resendRes.text();
+          console.error("[Email Dispatch] Resend API returned error:", resendRes.status, errBody);
+        } else {
+          console.log(`[Email Dispatch] Successfully sent consultation notification via Resend to ${recipient}`);
+        }
       } catch (emailErr) {
-        console.error("Failed to dispatch email via Resend:", emailErr);
+        console.error("[Email Dispatch] Failed to dispatch email via Resend:", emailErr);
       }
+    }
+
+    if (!smtpHost && !resendApiKey && !webhookUrl) {
+      console.warn(
+        "[Email Dispatch] No email transport configured (SMTP_HOST or RESEND_API_KEY or LEAD_NOTIFICATION_WEBHOOK_URL). " +
+        "Lead has been logged to container logs. Configure your credentials in .env to receive emails in your inbox."
+      );
     }
 
     return NextResponse.json(
