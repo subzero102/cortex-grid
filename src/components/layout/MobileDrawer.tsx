@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   X,
   BrainCircuit,
@@ -118,19 +119,16 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({ isOpen, onClose }) =
             <Link
               href="/"
               onClick={onClose}
-              className="flex items-center gap-2.5 focus:outline-hidden"
+              className="flex items-center focus:outline-hidden"
+              aria-label="Cortex Grid Consulting Home"
             >
-              <div className="w-8 h-8 rounded-lg bg-[#141413] text-white flex items-center justify-center p-1.5 shadow-sm">
-                <BrainCircuit className="w-full h-full text-white" />
-              </div>
-              <div>
-                <span className="font-extrabold text-sm tracking-widest text-[#141413] uppercase block leading-none font-mono">
-                  Cortex Grid
-                </span>
-                <span className="text-[10px] text-[#C75D3C] tracking-wider uppercase font-semibold">
-                  Consulting
-                </span>
-              </div>
+              <Image
+                src="/images/cortex-grid-website-logo.png"
+                alt="Cortex Grid Consulting"
+                width={170}
+                height={42}
+                className="h-9 w-auto object-contain hover:opacity-90 transition-opacity"
+              />
             </Link>
 
             <button

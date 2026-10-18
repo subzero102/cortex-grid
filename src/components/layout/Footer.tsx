@@ -2,8 +2,8 @@
 
 import React, { useState, FormEvent } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
-  BrainCircuit,
   PhoneCall,
   Mail,
   Clock,
@@ -36,20 +36,16 @@ export const Footer: React.FC = () => {
           <div className="lg:col-span-2 space-y-4">
             <Link
               href="/"
-              className="inline-flex items-center gap-3 group focus:outline-hidden"
+              className="inline-flex items-center focus:outline-hidden"
               aria-label="Cortex Grid Consulting Home"
             >
-              <div className="w-10 h-10 rounded-xl bg-[#141413] flex items-center justify-center p-2 shadow-xs group-hover:bg-[#2C2B28] transition-colors">
-                <BrainCircuit className="w-full h-full text-[#FAF8F5]" />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-bold text-base tracking-widest text-[#141413] uppercase leading-none font-mono">
-                  CORTEX GRID
-                </span>
-                <span className="text-[11px] text-[#D97757] tracking-wider uppercase font-semibold mt-0.5">
-                  Consulting
-                </span>
-              </div>
+              <Image
+                src="/images/cortex-grid-website-logo.png"
+                alt="Cortex Grid Consulting"
+                width={210}
+                height={52}
+                className="h-10 sm:h-11 w-auto object-contain hover:opacity-90 transition-opacity"
+              />
             </Link>
 
             <p className="text-[#5E5D59] text-sm leading-relaxed max-w-sm">

@@ -10,7 +10,7 @@ export const OrganizationJsonLd: React.FC = () => {
         "@id": "https://cortexgrid.com/#organization",
         "name": "Cortex Grid Consulting",
         "url": "https://cortexgrid.com",
-        "logo": "https://cortexgrid.com/logo.png",
+        "logo": "https://cortexgrid.com/images/cortex-grid-website-logo.png",
         "sameAs": [
           "https://www.linkedin.com/company/cortex-grid-consulting",
           "https://github.com/cortex-grid"

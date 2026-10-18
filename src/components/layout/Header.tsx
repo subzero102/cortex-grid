@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   BrainCircuit,
   ChevronDown,
@@ -111,20 +112,17 @@ export const Header: React.FC = () => {
             {/* Logo */}
             <Link
               href="/"
-              className="flex items-center gap-3 group focus:outline-hidden"
+              className="flex items-center focus:outline-hidden py-1"
               aria-label="Cortex Grid Consulting Home"
             >
-              <div className="w-10 h-10 rounded-xl bg-[#141413] flex items-center justify-center p-2 shadow-sm text-white group-hover:bg-[#C75D3C] transition-colors">
-                <BrainCircuit className="w-full h-full text-white" />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-extrabold text-base tracking-widest text-[#141413] uppercase leading-none font-mono">
-                  CORTEX GRID
-                </span>
-                <span className="text-[11px] text-[#C75D3C] tracking-wider uppercase font-semibold mt-0.5">
-                  Consulting
-                </span>
-              </div>
+              <Image
+                src="/images/cortex-grid-website-logo.png"
+                alt="Cortex Grid Consulting"
+                width={200}
+                height={50}
+                priority
+                className="h-10 sm:h-11 w-auto object-contain hover:opacity-90 transition-opacity"
+              />
             </Link>
 
             {/* Desktop Navigation */}
