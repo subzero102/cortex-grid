@@ -32,3 +32,17 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Production deployment
+
+This site runs on a Hostinger VPS behind the host's nginx:
+
+- `Dockerfile` / `docker-compose.yml` — build and run the Next.js standalone
+  server inside Docker on `127.0.0.1:3000`.
+- `.github/workflows/deploy.yaml` — SSH deploy on push to `main`.
+- `deploy/` — host nginx vhost, dual RSA+ECDSA TLS configuration, and the
+  `check-tls.sh` post-deploy verifier. **All TLS changes belong on the VPS**, not
+  in the application image.
+
+See [deploy/README.md](deploy/README.md) for the full runbook, renewal hooks, and
+the `ERR_SSL_VERSION_OR_CIPHER_MISMATCH` troubleshooting flow.
