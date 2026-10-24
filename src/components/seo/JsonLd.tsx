@@ -18,7 +18,7 @@ export const OrganizationJsonLd: React.FC = () => {
         "contactPoint": [
           {
             "@type": "ContactPoint",
-            "telephone": "+919911560093",
+            "telephone": "+971585507745",
             "contactType": "customer service",
             "areaServed": ["Global", "US", "CA", "GB", "EU", "IN"],
             "availableLanguage": ["en"]
@@ -30,7 +30,7 @@ export const OrganizationJsonLd: React.FC = () => {
         "@id": "https://cortexgrid.com/#professionalService",
         "name": "Cortex Grid Consulting",
         "image": "https://cortexgrid.com/og-image.png",
-        "telephone": "+919911560093",
+        "telephone": "+971585507745",
         "email": "alliances@cortexgridconsulting.com",
         "priceRange": "$$$$",
         "openingHours": "Mo-Su 00:00-24:00",

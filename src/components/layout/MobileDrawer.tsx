@@ -251,11 +251,11 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({ isOpen, onClose }) =
           <div className="text-center space-y-1.5">
             <div>
               <a
-                href="tel:+919911560093"
+                href="tel:+971585507745"
                 className="text-xs text-[#5E5D59] hover:text-[#C75D3C] inline-flex items-center gap-1.5 transition-colors font-mono"
               >
                 <PhoneCall className="w-3.5 h-3.5" />
-                Phone: +919911560093
+                Phone: +971585507745
               </a>
             </div>
             <div>

@@ -61,10 +61,10 @@ export default function ContactPage() {
                     <div>
                       <span className="text-xs text-[#73716B] block">Phone number:</span>
                       <a
-                        href="tel:+919911560093"
+                        href="tel:+971585507745"
                         className="font-bold text-[#141413] hover:text-[#D97757] transition-colors font-mono"
                       >
-                        +919911560093
+                        +971585507745
                       </a>
                     </div>
                   </li>
