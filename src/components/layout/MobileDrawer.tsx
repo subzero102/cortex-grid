@@ -14,7 +14,6 @@ import {
   Info,
   PhoneCall,
   ArrowRight,
-  ShieldCheck,
   Sparkles
 } from "lucide-react";
 
@@ -267,11 +266,6 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({ isOpen, onClose }) =
                 alliances@cortexgridconsulting.com
               </a>
             </div>
-          </div>
-
-          <div className="flex items-center justify-center gap-1.5 text-[11px] text-[#87867F]">
-            <ShieldCheck className="w-3.5 h-3.5 text-[#C75D3C]" />
-            <span>ISO 27001 & SOC2 Compliant</span>
           </div>
         </div>
       </div>

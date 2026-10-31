@@ -7,7 +7,6 @@ import {
   PhoneCall,
   Mail,
   Clock,
-  ShieldCheck,
   Send,
   CheckCircle2
 } from "lucide-react";
@@ -32,7 +31,7 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-12 border-b border-[#E5DFD5]">
-          {/* Brand & Certifications Column */}
+          {/* Brand Column */}
           <div className="lg:col-span-2 space-y-4">
             <Link
               href="/"
@@ -54,12 +53,6 @@ export const Footer: React.FC = () => {
 
             {/* Enterprise Badges */}
             <div className="pt-2 flex flex-wrap items-center gap-3 text-xs text-[#5E5D59]">
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white border border-[#E5DFD5] text-[#141413] font-medium shadow-2xs">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#D97757]" /> ISO 27001 Certified
-              </span>
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white border border-[#E5DFD5] text-[#141413] font-medium shadow-2xs">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#D97757]" /> SOC 2 Type II
-              </span>
               <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white border border-[#E5DFD5] text-[#141413] font-medium shadow-2xs">
                 AWS & Microsoft Partner
               </span>

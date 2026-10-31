@@ -11,13 +11,13 @@ import { QuickConsultationSection } from "@/components/home/QuickConsultationSec
 export const metadata: Metadata = {
   title: "About Us | Cortex Grid Consulting - Enterprise IT & AI Operations",
   description:
-    "Learn about Cortex Grid Consulting: our mission, architectural philosophy, security certifications, and leadership team dedicated to future-ready IT and cost-governed AI operations.",
+    "Learn about Cortex Grid Consulting: our mission, architectural philosophy, security-first engineering approach, and leadership team dedicated to future-ready IT and cost-governed AI operations.",
   keywords: [
     "About Cortex Grid",
     "Enterprise IT Consulting",
     "Enterprise AI Operations",
     "Cloud Architecture Firm",
-    "ISO 27001 IT Advisory"
+    "Enterprise IT Advisory"
   ]
 };
 
@@ -105,38 +105,30 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Compliance Framework Section */}
+      {/* Data Governance Section */}
       <section className="py-20 bg-[#F3EFEA]/40 border-b border-[#E5DFD5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-3xl p-8 sm:p-12 border border-[#E5DFD5] bg-white shadow-xs">
             <div className="text-center max-w-2xl mx-auto mb-10">
               <span className="text-xs font-bold uppercase tracking-widest text-[#C75D3C] block mb-2">
-                Certified Assurance
+                Privacy & Governance
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold text-[#141413]">
-                Enterprise Compliance Standards
+                Data Privacy & Regulatory Alignment
               </h2>
               <p className="text-[#5E5D59] text-xs sm:text-sm mt-2">
-                Our practices align with the world&apos;s most stringent cybersecurity and operational standards.
+                Our data handling practices are designed around global privacy and governance regulations.
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto text-center">
               <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#E5DFD5]">
-                <span className="text-lg font-bold text-[#141413] block">ISO/IEC 27001</span>
-                <span className="text-xs text-[#D97757] font-semibold mt-1 block">Information Security Management</span>
+                <span className="text-lg font-bold text-[#141413] block">GDPR</span>
+                <span className="text-xs text-[#D97757] font-semibold mt-1 block">EU Data Protection</span>
               </div>
               <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#E5DFD5]">
-                <span className="text-lg font-bold text-[#141413] block">SOC 2 Type II</span>
-                <span className="text-xs text-[#D97757] font-semibold mt-1 block">Trust Services Criteria</span>
-              </div>
-              <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#E5DFD5]">
-                <span className="text-lg font-bold text-[#141413] block">HIPAA / HITECH</span>
-                <span className="text-xs text-[#D97757] font-semibold mt-1 block">Healthcare Data Protection</span>
-              </div>
-              <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#E5DFD5]">
-                <span className="text-lg font-bold text-[#141413] block">GDPR & CCPA</span>
-                <span className="text-xs text-[#D97757] font-semibold mt-1 block">Privacy & Data Governance</span>
+                <span className="text-lg font-bold text-[#141413] block">CCPA</span>
+                <span className="text-xs text-[#D97757] font-semibold mt-1 block">California Privacy Rights</span>
               </div>
             </div>
           </div>

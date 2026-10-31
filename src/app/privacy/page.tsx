@@ -4,7 +4,7 @@ import { ShieldCheck } from "lucide-react";
 export const metadata: Metadata = {
   title: "Privacy Policy & Data Sovereignty | Cortex Grid Consulting",
   description:
-    "Cortex Grid Consulting's enterprise privacy policy, data sovereignty pledge, zero third-party AI training retention, and compliance with GDPR, CCPA, and HIPAA."
+    "Cortex Grid Consulting's enterprise privacy policy, data sovereignty pledge, zero third-party AI training retention, and compliance with GDPR and CCPA."
 };
 
 export default function PrivacyPage() {
@@ -20,7 +20,7 @@ export default function PrivacyPage() {
           Privacy Policy & Data Governance
         </h1>
         <p className="text-xs text-[#73716B] mb-8">
-          Last Updated: October 2026 • Governed by SOC 2 Type II & ISO 27001 Standards
+          Last Updated: October 2026
         </p>
 
         <div className="space-y-8 text-sm text-[#5E5D59] leading-relaxed">
@@ -68,7 +68,7 @@ export default function PrivacyPage() {
           <section className="space-y-3">
             <h2 className="text-lg font-bold text-[#141413]">5. Compliance & Regulatory Alignment</h2>
             <p>
-              Our data management practices conform to the EU General Data Protection Regulation (GDPR), California Consumer Privacy Act (CCPA), Health Insurance Portability and Accountability Act (HIPAA), and AICPA SOC 2 standards.
+              Our data management practices conform to the EU General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA).
             </p>
           </section>
 

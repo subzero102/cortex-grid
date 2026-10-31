@@ -194,15 +194,6 @@ export const HeroSection: React.FC = () => {
             <span className="font-semibold text-sm tracking-wide hover:text-[#141413] transition-colors">
               Google Cloud Partner
             </span>
-            <span className="font-semibold text-sm tracking-wide hover:text-[#141413] transition-colors">
-              ISO 27001 Certified
-            </span>
-            <span className="font-semibold text-sm tracking-wide hover:text-[#141413] transition-colors">
-              SOC 2 Type II
-            </span>
-            <span className="font-semibold text-sm tracking-wide hover:text-[#141413] transition-colors">
-              HIPAA Compliant
-            </span>
           </div>
         </div>
       </div>

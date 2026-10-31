@@ -413,7 +413,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
         <div className="flex items-center gap-2 text-xs text-[#73716B]">
           <ShieldCheck className="w-4 h-4 text-[#D97757] flex-shrink-0" />
-          <span>Enterprise Confidentiality & SOC2 Ready • Strict NDA on Request</span>
+          <span>Enterprise Confidentiality • Strict NDA on Request</span>
         </div>
 
         <button

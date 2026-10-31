@@ -343,7 +343,6 @@ export const servicesData: Record<string, ServiceData> = {
       solution: "Engineered a multi-AZ AWS architecture with auto-scaling Aurora PostgreSQL, automated S3 archival, and Savings Plans.",
       results: [
         "$14,200 saved per month on cloud compute",
-        "Achieved 100% HIPAA compliance verification",
         "Zero unplanned downtime over 18 consecutive months"
       ]
     }
