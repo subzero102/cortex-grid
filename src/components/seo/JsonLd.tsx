@@ -8,7 +8,13 @@ export const OrganizationJsonLd: React.FC = () => {
       {
         "@type": "Organization",
         "@id": "https://cortexgrid.com/#organization",
-        "name": "Cortex Grid Consulting",
+        "name": "Cortex Grid Consulting FZ-LLC",
+        "legalName": "Cortex Grid Consulting FZ-LLC",
+        "identifier": {
+          "@type": "PropertyValue",
+          "name": "License Number",
+          "value": "47038066"
+        },
         "url": "https://cortexgrid.com",
         "logo": "https://cortexgrid.com/images/cortex-grid-website-logo.png",
         "sameAs": [
@@ -28,7 +34,13 @@ export const OrganizationJsonLd: React.FC = () => {
       {
         "@type": "ProfessionalService",
         "@id": "https://cortexgrid.com/#professionalService",
-        "name": "Cortex Grid Consulting",
+        "name": "Cortex Grid Consulting FZ-LLC",
+        "legalName": "Cortex Grid Consulting FZ-LLC",
+        "identifier": {
+          "@type": "PropertyValue",
+          "name": "License Number",
+          "value": "47038066"
+        },
         "image": "https://cortexgrid.com/og-image.png",
         "telephone": "+971585507745",
         "email": "alliances@cortexgridconsulting.com",
@@ -55,7 +67,7 @@ export const ServiceJsonLd: React.FC<{ service: ServiceData }> = ({ service }) =
     "serviceType": service.shortTitle,
     "provider": {
       "@type": "ProfessionalService",
-      "name": "Cortex Grid Consulting",
+      "name": "Cortex Grid Consulting FZ-LLC",
       "url": "https://cortexgrid.com"
     },
     "description": service.description,

@@ -6,7 +6,7 @@ import { ArrowRight, CheckCircle2, Layers } from "lucide-react";
 import { QuickConsultationSection } from "@/components/home/QuickConsultationSection";
 
 export const metadata: Metadata = {
-  title: "Enterprise Practice Areas & Services Directory | Cortex Grid Consulting",
+  title: "Enterprise Practice Areas & Services Directory | Cortex Grid Consulting FZ-LLC",
   description:
     "Explore Cortex Grid's six core consulting practices: AI Operations & FinOps, On-Cloud Infrastructure, Web Solutions, Workplace Email, Enterprise Software, and Professional IT.",
   keywords: [

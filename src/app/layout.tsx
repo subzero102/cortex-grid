@@ -15,8 +15,8 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://cortexgridconsultin
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Cortex Grid Consulting | Future-Ready IT & Cost-Effective AI Operations",
-    template: "%s | Cortex Grid Consulting"
+    default: "Cortex Grid Consulting FZ-LLC | Future-Ready IT & Cost-Effective AI Operations",
+    template: "%s | Cortex Grid Consulting FZ-LLC"
   },
   description:
     "Helping mid-market and enterprise organizations modernize IT infrastructure, optimize multi-cloud expenditure, and scale production AI workflows with predictable token economics and zero IP leakage.",
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
     "managed IT services",
     "vCIO advisory"
   ],
-  authors: [{ name: "Cortex Grid Consulting" }],
-  creator: "Cortex Grid Consulting LLC",
-  publisher: "Cortex Grid Consulting LLC",
+  authors: [{ name: "Cortex Grid Consulting FZ-LLC" }],
+  creator: "Cortex Grid Consulting FZ-LLC",
+  publisher: "Cortex Grid Consulting FZ-LLC",
   formatDetection: {
     email: false,
     address: false,
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://cortexgrid.com",
-    siteName: "Cortex Grid Consulting",
-    title: "Cortex Grid Consulting | Future-Ready IT & Cost-Effective AI Operations",
+    siteName: "Cortex Grid Consulting FZ-LLC",
+    title: "Cortex Grid Consulting FZ-LLC | Future-Ready IT & Cost-Effective AI Operations",
     description:
       "Modernize IT infrastructure, optimize multi-cloud expenditure, and operationalize generative AI workflows with predictable token economics and zero IP leakage.",
     images: [
@@ -54,13 +54,13 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Cortex Grid Consulting - Future-Ready IT & AI Operations"
+        alt: "Cortex Grid Consulting FZ-LLC - Future-Ready IT & AI Operations"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cortex Grid Consulting | Future-Ready IT & Cost-Effective AI Operations",
+    title: "Cortex Grid Consulting FZ-LLC | Future-Ready IT & Cost-Effective AI Operations",
     description:
       "Enterprise IT architecture, sovereign RAG, multi-cloud FinOps, and 24/7 managed support.",
     images: ["/og-image.png"]

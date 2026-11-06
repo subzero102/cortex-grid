@@ -9,9 +9,9 @@ import {
 import { QuickConsultationSection } from "@/components/home/QuickConsultationSection";
 
 export const metadata: Metadata = {
-  title: "About Us | Cortex Grid Consulting - Enterprise IT & AI Operations",
+  title: "About Us | Cortex Grid Consulting FZ-LLC - Enterprise IT & AI Operations",
   description:
-    "Learn about Cortex Grid Consulting: our mission, architectural philosophy, security-first engineering approach, and leadership team dedicated to future-ready IT and cost-governed AI operations.",
+    "Learn about Cortex Grid Consulting FZ-LLC: our mission, architectural philosophy, security-first engineering approach, and leadership team dedicated to future-ready IT and cost-governed AI operations.",
   keywords: [
     "About Cortex Grid",
     "Enterprise IT Consulting",
@@ -36,7 +36,7 @@ export default function AboutPage() {
             Engineering Enterprise Trust in the Era of AI & Cloud
           </h1>
           <p className="mt-4 text-base sm:text-lg text-[#5E5D59] max-w-2xl mx-auto leading-relaxed">
-            Cortex Grid Consulting was founded to resolve a critical enterprise failure: companies being sold high-cost, experimental AI and unmanaged cloud architectures with zero financial accountability or data protection.
+            Cortex Grid Consulting FZ-LLC was founded to resolve a critical enterprise failure: companies being sold high-cost, experimental AI and unmanaged cloud architectures with zero financial accountability or data protection.
           </p>
         </div>
       </section>

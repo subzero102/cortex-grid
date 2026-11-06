@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import { ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Cortex Grid Consulting",
+  title: "Terms of Service | Cortex Grid Consulting FZ-LLC",
   description:
-    "Cortex Grid Consulting's Terms of Service governing technical advisory, architecture audits, and managed IT agreements."
+    "Cortex Grid Consulting FZ-LLC's Terms of Service governing technical advisory, architecture audits, and managed IT agreements."
 };
 
 export default function TermsPage() {
@@ -20,14 +20,14 @@ export default function TermsPage() {
           Terms of Service
         </h1>
         <p className="text-xs text-[#73716B] mb-8">
-          Last Updated: October 2026 • Cortex Grid Consulting LLC
+          Last Updated: October 2026 • Cortex Grid Consulting FZ-LLC • License No. 47038066
         </p>
 
         <div className="space-y-8 text-sm text-[#5E5D59] leading-relaxed">
           <section className="space-y-3">
             <h2 className="text-lg font-bold text-[#141413]">1. Scope of Engagement</h2>
             <p>
-              These Terms of Service govern your use of the Cortex Grid Consulting website, consultation request portals, ROI calculators, and initial diagnostic audits. Formal managed services, cloud migrations, and custom AI implementations are additionally governed by individual Master Services Agreements (MSA) and Statements of Work (SOW).
+              These Terms of Service govern your use of the Cortex Grid Consulting FZ-LLC website, consultation request portals, ROI calculators, and initial diagnostic audits. Formal managed services, cloud migrations, and custom AI implementations are additionally governed by individual Master Services Agreements (MSA) and Statements of Work (SOW).
             </p>
           </section>
 
@@ -48,7 +48,7 @@ export default function TermsPage() {
           <section className="space-y-3">
             <h2 className="text-lg font-bold text-[#141413]">4. Governing Law</h2>
             <p>
-              These terms are governed by and construed in accordance with the laws of the State of Texas, without regard to its conflict of law principles.
+              These terms are governed by and construed in accordance with the laws of the United Arab Emirates, without regard to its conflict of law principles.
             </p>
           </section>
 

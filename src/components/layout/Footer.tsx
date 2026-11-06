@@ -36,11 +36,11 @@ export const Footer: React.FC = () => {
             <Link
               href="/"
               className="inline-flex items-center focus:outline-hidden"
-              aria-label="Cortex Grid Consulting Home"
+              aria-label="Cortex Grid Consulting FZ-LLC Home"
             >
               <Image
                 src="/images/cortex-grid-website-logo.png"
-                alt="Cortex Grid Consulting"
+                alt="Cortex Grid Consulting FZ-LLC"
                 width={210}
                 height={52}
                 className="h-10 sm:h-11 w-auto object-contain hover:opacity-90 transition-opacity"
@@ -265,7 +265,8 @@ export const Footer: React.FC = () => {
         {/* Bottom Copyright & Legal row */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#73716B]">
           <p>
-            © 2026 Cortex Grid Consulting LLC. All rights reserved.
+            © 2026 Cortex Grid Consulting FZ-LLC. All rights reserved.{" "}
+            <span className="whitespace-nowrap">License No. 47038066</span>
           </p>
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="hover:text-[#141413] transition-colors">

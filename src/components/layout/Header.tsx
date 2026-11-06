@@ -113,11 +113,11 @@ export const Header: React.FC = () => {
             <Link
               href="/"
               className="flex items-center focus:outline-hidden py-1"
-              aria-label="Cortex Grid Consulting Home"
+              aria-label="Cortex Grid Consulting FZ-LLC Home"
             >
               <Image
                 src="/images/cortex-grid-website-logo.png"
-                alt="Cortex Grid Consulting"
+                alt="Cortex Grid Consulting FZ-LLC"
                 width={200}
                 height={50}
                 priority

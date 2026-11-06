@@ -20,11 +20,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!service) {
     return {
-      title: "Service Not Found | Cortex Grid Consulting"
+      title: "Service Not Found | Cortex Grid Consulting FZ-LLC"
     };
   }
 
-  const title = `${service.title} | Cortex Grid Consulting - Cloud & AI Operations`;
+  const title = `${service.title} | Cortex Grid Consulting FZ-LLC - Cloud & AI Operations`;
   const description = service.description;
 
   return {
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
       url: `https://cortexgrid.com/services/${service.slug}`,
-      siteName: "Cortex Grid Consulting",
+      siteName: "Cortex Grid Consulting FZ-LLC",
       type: "website"
     },
     twitter: {

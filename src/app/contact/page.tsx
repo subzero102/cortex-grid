@@ -10,9 +10,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Us & Schedule Consultation | Cortex Grid Consulting",
+  title: "Contact Us & Schedule Consultation | Cortex Grid Consulting FZ-LLC",
   description:
-    "Get in touch with Cortex Grid Consulting. Schedule a 48-Hour AI Efficiency Audit or speak with our senior multi-cloud architects and IT advisors.",
+    "Get in touch with Cortex Grid Consulting FZ-LLC. Schedule a 48-Hour AI Efficiency Audit or speak with our senior multi-cloud architects and IT advisors.",
   keywords: [
     "Contact Cortex Grid",
     "Schedule IT Consultation",

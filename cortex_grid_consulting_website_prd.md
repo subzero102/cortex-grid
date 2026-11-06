@@ -1,8 +1,9 @@
-# Product Requirement Document (PRD): Cortex Grid Consulting Website
+# Product Requirement Document (PRD): Cortex Grid Consulting FZ-LLC Website
 
 ## 1. Executive Summary
 
-**Company Name:** Cortex Grid Consulting  
+**Company Name:** Cortex Grid Consulting FZ-LLC  
+**License Number:** 47038066  
 **Domain:** IT Consulting, Enterprise Managed Services & AI Operations  
 **Goal:** Build a modern, high-performance, mobile-responsive, and SEO-optimized website to showcase IT and AI capabilities, establish enterprise trust, and convert inbound business traffic into qualified leads via accessible contact touchpoints.
 
@@ -86,7 +87,7 @@
 
 1. **Meta Configuration & High-Value Keywords:**
    * Keywords: *AI workflow consulting, cost-effective enterprise AI, cloud migration, Office 365 setup, IT consulting services*.
-   * Dynamic `<title>` tags: `[Service Name] | Cortex Grid Consulting - Cloud & AI Operations`
+   * Dynamic `<title>` tags: `[Service Name] | Cortex Grid Consulting FZ-LLC - Cloud & AI Operations`
    * OpenGraph (OG) and Twitter Card tags with preview cards.
 
 2. **Structured Data (Schema.org):**
@@ -122,7 +123,7 @@
 
 ```
 # Instruction to Antigravity:
-Please generate a production-ready Next.js (App Router) project with Tailwind CSS, TypeScript, and Lucide icons for "Cortex Grid Consulting".
+Please generate a production-ready Next.js (App Router) project with Tailwind CSS, TypeScript, and Lucide icons for "Cortex Grid Consulting FZ-LLC".
 Include:
 1. Complete layout with responsive Header, Mobile Drawer, and Footer.
 2. Landing page with Hero ("Future-Ready IT & Cost-Effective AI Operations"), Service Grid (6 core areas including AI Operations), Value Proposition, Testimonials, and Quick Consultation section.

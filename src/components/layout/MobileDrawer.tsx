@@ -119,11 +119,11 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({ isOpen, onClose }) =
               href="/"
               onClick={onClose}
               className="flex items-center focus:outline-hidden"
-              aria-label="Cortex Grid Consulting Home"
+              aria-label="Cortex Grid Consulting FZ-LLC Home"
             >
               <Image
                 src="/images/cortex-grid-website-logo.png"
-                alt="Cortex Grid Consulting"
+                alt="Cortex Grid Consulting FZ-LLC"
                 width={170}
                 height={42}
                 className="h-9 w-auto object-contain hover:opacity-90 transition-opacity"

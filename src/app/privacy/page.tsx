@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import { ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy & Data Sovereignty | Cortex Grid Consulting",
+  title: "Privacy Policy & Data Sovereignty | Cortex Grid Consulting FZ-LLC",
   description:
-    "Cortex Grid Consulting's enterprise privacy policy, data sovereignty pledge, zero third-party AI training retention, and compliance with GDPR and CCPA."
+    "Cortex Grid Consulting FZ-LLC's enterprise privacy policy, data sovereignty pledge, zero third-party AI training retention, and compliance with GDPR and CCPA."
 };
 
 export default function PrivacyPage() {
@@ -20,14 +20,14 @@ export default function PrivacyPage() {
           Privacy Policy & Data Governance
         </h1>
         <p className="text-xs text-[#73716B] mb-8">
-          Last Updated: October 2026
+          Last Updated: October 2026 • Cortex Grid Consulting FZ-LLC • License No. 47038066
         </p>
 
         <div className="space-y-8 text-sm text-[#5E5D59] leading-relaxed">
           <section className="space-y-3">
             <h2 className="text-lg font-bold text-[#141413]">1. Executive Overview</h2>
             <p>
-              At Cortex Grid Consulting LLC (&quot;Cortex Grid&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;), we operate at the highest standards of data security, confidentiality, and data sovereignty. This Privacy Policy outlines how we handle client data, telemetry, and communications across our website, audits, and enterprise consulting engagements.
+              At Cortex Grid Consulting FZ-LLC (&quot;Cortex Grid&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;), we operate at the highest standards of data security, confidentiality, and data sovereignty. This Privacy Policy outlines how we handle client data, telemetry, and communications across our website, audits, and enterprise consulting engagements.
             </p>
           </section>
 

@@ -135,7 +135,7 @@ export async function POST(request: Request) {
                 <div style="background: #FAF8F5; border-left: 4px solid #D97757; padding: 12px; margin-top: 6px; border-radius: 4px; white-space: pre-wrap;">${message}</div>
               </div>
               <hr style="border: 0; border-top: 1px solid #E5DFD5; margin-top: 24px;" />
-              <p style="font-size: 11px; color: #87867F;">Dispatched by Cortex Grid Consulting Lead Router at ${new Date().toUTCString()}</p>
+              <p style="font-size: 11px; color: #87867F;">Dispatched by Cortex Grid Consulting FZ-LLC Lead Router at ${new Date().toUTCString()}</p>
             </div>
           `,
         });
@@ -196,7 +196,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         success: true,
-        message: "Thank you! Your request has been logged. A senior architect from Cortex Grid Consulting will review your project parameters and contact you within 24 business hours."
+        message: "Thank you! Your request has been logged. A senior architect from Cortex Grid Consulting FZ-LLC will review your project parameters and contact you within 24 business hours."
       },
       { status: 200 }
     );
